@@ -1,0 +1,721 @@
+body{
+    width: 1920px;
+    background-color: #FFFFFF;
+    margin: 0;
+    overflow-x: hidden; 
+}
+
+#top_section{
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    background-color: #FFFFFF;
+    width: 100vw;
+    height: 65px;
+}
+
+#top_section a:hover{
+    cursor: pointer;
+}
+
+#menu_button{
+    position: absolute;
+    top: 34px;
+    left: 32px;
+}
+
+#logo{
+    position: absolute;
+    left: 80px;
+    top: 30px; 
+}
+
+.search{
+    display: flex;
+    position: absolute;
+    top: 20px;
+    left: 255px;
+}
+
+#search_field{
+   width: 830px; 
+   height: 44px;
+   border-radius: 22px;
+   opacity: 30%;
+   border: 0;
+   display: flex;
+   position: relative;
+   background-color: #EBEBEB;
+}
+
+@media (max-width: 1460px) {
+    .search{
+        width: 50%;
+    }
+    #search_field {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1220px) {
+    .search{
+        width: 40%;
+    }
+    #search_field {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1010px) {
+    .search{
+        width: 30%;
+    }
+    #search_field {
+        width: 100%;
+    }
+}
+
+@media (max-width: 860px) {
+    .search{
+        width: 20%;
+    }
+    #search_field {
+        width: 100%;
+    }
+}
+
+#search_text{
+    position: relative;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin: auto;
+    margin-left: 20px;
+}
+
+.search_icon{
+    position: absolute;
+    right: 15px;
+    margin-top: 12.5px;
+}
+
+.right_part{
+    display: flex;
+}
+
+.icons{
+    position: fixed;
+    top: 23px;
+    right: 155px; 
+    width: 175px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#notifications{
+    display: flex;
+    align-items: center;
+}
+
+#notify_oval{
+    position: absolute;
+    margin-bottom: 17px;
+    margin-left: 7px;
+}
+
+#notify_count{
+    font-family: "Mulish", sans-serif;
+    position: absolute;
+    margin-bottom: 17px;
+    margin-left: 13px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.user_pic{
+    position: fixed;
+    top: 22px;
+    right: 70px;
+}
+
+.sidebar{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 84vh;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+    position: fixed;
+    top: 114px;
+}
+
+.sidebar:hover {
+  overflow-y: auto;
+}
+
+
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    left: 31px;
+}
+
+.sidebar a{
+    display: flex;
+}
+
+.sidebar a:hover{
+    cursor: pointer;
+}
+
+#menu, a, div{
+    position: relative;
+    font-family: "Mulish", sans-serif;
+    color: #898989;
+    justify-content: space-between;
+}
+
+#home{
+    color: #FF0000 !important;
+}
+
+.home{
+    width: 78px;
+    height: 20px;
+}
+
+#home_ico{
+    width: 20px;
+    height: 19px;
+}
+
+.trending{
+    width: 96px;
+    height: 21px;
+}
+
+#trending_ico{
+    width: 16px;
+    height: 21px;
+}
+
+.subscriptions{
+    width: 132px;
+    height: 20px;
+}
+
+#subscriptions_ico{
+    width: 18px;
+    height: 18px;
+}
+
+.library{
+    width: 86px;
+    height: 20px;
+}
+
+#library_ico{
+    width: 20px;
+    height: 16px;
+}
+
+.history{
+    width: 87px;
+    height: 20px;
+}
+
+#history_ico{
+    width: 20px;
+    height: 18px;
+}
+
+.watch_later{
+    width: 119px;
+    height: 20px;
+}
+
+#watch_later_ico{
+    width: 17px;
+    height: 19px;
+}
+
+.favourites{
+    width: 110px;
+    height: 20px;
+}
+
+#favourites_ico{
+    width: 19px;
+    height: 18px;
+}
+
+.liked_videos{
+    width: 123px;
+    height: 20px;
+}
+
+#liked_videos_ico{
+    width: 18px;
+    height: 17px;
+}
+
+.music{
+    width: 75px;
+    height: 20px;
+}
+
+#music_ico{
+    width: 18px;
+    height: 20px;
+}
+
+.games{
+    width: 86px;
+    height: 20px;
+}
+
+#games_ico{
+    width: 22px;
+    height: 16px;
+}
+
+.show_more{
+    width: 115px;
+    height: 20px;
+}
+
+#show_more_ico{
+    margin-top: 8px;
+    margin-left: 4px;
+    width: 14px;
+    height: 8px;
+}
+
+#subscriptions_menu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 159px;
+    height: 324px;
+    left: 31px;
+    gap: 30px;
+}
+
+#subscriptions_menu #subs a{
+    position: relative;
+    font-family: "Mulish", sans-serif;
+    color: #898989;
+    gap: 10px;
+    align-items: center;
+}
+
+#subscriptions_menu #subs a{
+    width: 159px;
+    justify-content: start;
+}
+
+#subscriptions_title{
+    font-family: "Mulish", sans-serif;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#subs{
+    width: 159px;
+    height: 271px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#subscriptions_menu #subs a img{
+    width: 26px;
+    height: 26px;
+}
+
+.settings{
+    position: relative;
+    display: flex;
+    width: 84px;
+    height: 20px;
+    left: 34px;
+    justify-content: space-between;
+}
+
+#settings_ico{
+    width: 19px;
+    height: 20px;
+}
+
+#settings{
+    position: relative;
+    font-family: "Mulish", sans-serif;
+    color: #898989;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 255px;
+    top: 114px; 
+    width: 90vw;
+}
+
+#Dollie_Blair{
+    display: flex;
+    flex-direction: column;
+    height: 263px;
+    gap: 30px;
+    margin-top: 61px;
+}
+
+#video_sec{
+    width: 295px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+}
+
+#video_sec_name{
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #19202C;
+}
+
+.videos{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 40px;
+    font-family: "Mulish", sans-serif;
+}
+
+.videos a:hover{
+    cursor: pointer;
+}
+
+.video{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.preview img{
+    width: 250px;
+    height: 150px;
+}
+
+.rec_preview img{
+    width: 540px;
+    height: 250px;  
+}
+
+.time{
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 193px;
+    width: 47px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time_text{
+    opacity: 130%;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.video_name{
+    font-weight: 700;
+    font-size: 16px;
+    color: #19202C;
+}
+
+.info{
+    font-weight: 400;
+    font-size: 13px;
+    color: #C2C2C2;
+    display: flex;
+}
+
+.buttons_sec{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    position: relative;
+    margin-left: auto;
+    margin-right: 240px;
+}
+
+.buttons_sec a:hover{
+    cursor: pointer;
+}
+
+
+.buttons_sec img{
+    width: 28px;
+    height: 28px;
+}
+
+#sec{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    gap: 19px;
+    align-items:center;
+}
+
+.buttons_sec #subscribe_button:hover{
+    cursor: pointer;
+}
+
+#subscribe_button{
+    background-color: #FF0000;
+    width: 154px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -80px;
+}
+
+.buttons_sec #subscribe_button:hover{
+    cursor: pointer;
+}
+
+#author{
+    position: relative;
+    width: 299px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+#author_inf{
+    display: flex;
+    flex-direction: column;
+}
+
+#author_pic{
+    height: 80px;
+}
+
+#author_name{
+    display: flex;
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #19202C;
+}
+
+#author_subs{
+    display: flex;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #C2C2C2;
+}
+
+.channel_menu{
+    margin-top: 20px;
+    display: flex;
+    width: 834px;
+    height: 28px;
+}
+
+.channel_menu div{
+    display: flex;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+}
+
+.channel_menu a{
+    text-decoration: none;
+    align-items: center;
+}
+
+#home_sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home_button{
+    color: #FF0000;
+}
+
+#underscore{
+    background-color: #FF0000;
+    width: 60px;
+    height: 2px;
+    border-radius: 3px;
+}
+
+.center{
+    height: 250px;
+    margin-top: 54px;
+    display: flex;
+    flex-direction: row;
+    gap: 204px;
+    justify-content: start;
+}
+
+.prev_video{
+    width: 1120px;
+    height: 250px;
+}
+
+.prev_video .video{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.prev_info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+}
+
+#video_name{
+    width: 431px;
+    height: 68px;
+    margin-top: 17px;
+    display: flex;
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #19202C;
+}
+
+#video_description{
+    display: flex;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    opacity: 60%;
+}
+
+#video_info{
+    margin-top: 20px;
+    display: flex;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #C2C2C2;
+}
+
+.video{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.prev_preview img{
+    width: 540px;
+    height: 250px;  
+}
+
+.prev_video .time{
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 483px;
+    width: 47px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recommended_channels{
+    width: 188px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: -70px;
+}
+
+#rec_title{
+    display: flex;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #C2C2C2;
+}
+
+.recommended_channels a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 189px;
+    height: 50px;
+}
+
+.recommended_channels a div{
+    display: flex;
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #19202C;
+}
+
+.recommended_channels a img{
+    height: 50px;
+}
+
+#sec_auth{
+    margin-top: 30px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    gap: 19px;
+    align-items:center;
+}
+
+#channel_back{
+    margin-top: -10px;
+}
+
+#sec_notify{
+    width: 22px;
+    height: 26px;
+}
+
+#sec_notify_a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -70px;
+}

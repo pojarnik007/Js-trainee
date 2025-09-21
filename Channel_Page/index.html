@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+
+    <div id="top_section">
+        <a id="menu_button">
+            <img src="./resources/topbar_icons/Menu.png" alt="menu button" height="17px" width="20px">
+        </a>
+        <a>
+            <img id="logo" src="./resources/topbar_icons/Logo/Black.png" alt="logo" height="25px" width="116px">
+        </a>
+        <div class="search">
+            <div id="search_field">
+                <div id="search_text">Search</div>
+            </div>
+            <a class="search_icon">
+                <img id="search_icon" src="./resources/topbar_icons/Shape.png" alt="search logo" height="19px" width="19px">
+            </a>
+        </div>
+            <div class="icons">
+                <a>
+                    <img src="./resources/topbar_icons/icons/phone-18.png" alt="meeting" height="20px" width="27px">
+                </a>
+                <a>
+                    <img src="./resources/topbar_icons/icons/Combined Shape.png" alt="apps" height="21px" width="21px">
+                </a>
+                <a id="notifications">
+                    <img src="./resources/topbar_icons/icons/ui-11.png" alt="notifies" height="26px" width="22px">
+                    <img id="notify_oval" src="./resources/topbar_icons/icons/Oval.png" alt="notify alert" height="18px" width="18px">
+                    <div id="notify_count">3</div>
+                </a>
+            </div>
+            <a class="user_pic">
+                <img src="./resources/topbar_icons/Userpic.png" alt="User picture" height="40px" width="40px">
+            </a>
+    </div>
+</head>
+<body>
+    <div class="sidebar">
+        <aside id="menu">
+            <a class="home">
+                <img id="home_ico" src="./resources/sidebar_icons/ui-71.png" alt="">
+                <div id="home">Home</div>
+            </a>
+            <a class="trending">
+                <img id="trending_ico" src="./resources/sidebar_icons/Path-957-Copy.png" alt="">
+                <div id="trending">Trending</div>
+            </a>
+            <a class="subscriptions">
+                <img id="subscriptions_ico" src="./resources/sidebar_icons/ui-45.png" alt="">
+                <div id="subscriptions">Subscriptions</div>
+            </a>
+            <a></a>
+            <a class="library">
+                <img id="library_ico" src="./resources/sidebar_icons/documents-11.png" alt="">
+                <div id="library">Library</div>
+            </a>
+            <a class="history">
+                <img id="history_ico" src="./resources/sidebar_icons/others-07.png" alt="">
+                <div id="history">History</div>
+            </a>
+            <a class="watch_later">
+                <img id="watch_later_ico" src="./resources/sidebar_icons/tech-25.png" alt="">
+                <div id="watch_later">Watch later</div>
+            </a>
+            <a class="favourites">
+                <img id="favourites_ico" src="./resources/sidebar_icons/ui-02.png" alt="">
+                <div id="favourites">Favourites</div>
+            </a>
+            <a class="liked_videos">
+                <img id="liked_videos_ico" src="./resources/sidebar_icons/ui-03.png" alt="">
+                <div id="liked_videos">Liked videos</div>
+            </a>
+            <a class="music">
+                <img id="music_ico" src="./resources/sidebar_icons/ui-80.png" alt="">
+                <div id="music">Music</div>
+            </a>
+            <a class="games">
+                <img id="games_ico" src="./resources/sidebar_icons/tech-02.png" alt="">
+                <div id="games">Games</div>
+            </a>
+            <a class="show_more">
+                <img id="show_more_ico" src="./resources/sidebar_icons/chevron-down.png" alt="">
+                <div id="show_more">Show more</div>
+            </a>
+        </aside>
+        <aside id="subscriptions_menu">
+            <div id="subscriptions_title">Subscriptions</div>
+            <div id="subs">
+                <a class="sub1">
+                    <img id="sub1_pic" src="./resources/sidebar_icons/subscriprions/Oval1.png" alt="">
+                    <div id="sub1">Gussie Singleton</div>
+                </a>
+                <a class="sub2">
+                    <img id="sub2_pic" src="./resources/sidebar_icons/subscriprions/Oval2.png" alt="">
+                    <div id="sub2">Nora Francis</div>
+                </a>
+                <a class="sub3">
+                    <img id="sub3_pic" src="./resources/sidebar_icons/subscriprions/Oval3.png" alt="">
+                    <div id="sub3">Belle Briggs</div>
+                </a>
+                <a class="sub4">
+                    <img id="sub4_pic" src="./resources/sidebar_icons/subscriprions/Oval4.png" alt="">
+                    <div id="sub4">Eunice Cortez</div>
+                </a>
+                <a class="sub5">
+                    <img id="sub5_pic" src="./resources/sidebar_icons/subscriprions/Oval5.png" alt="">
+                    <div id="sub5">Emma Hanson</div>
+                </a>
+                <a class="sub6">
+                    <img id="sub6_pic" src="./resources/sidebar_icons/subscriprions/Oval6.png" alt="">
+                    <div id="sub6">Leah Berry</div>
+                </a>
+            </div>
+        </aside>
+        <a class="settings">
+            <img id="settings_ico" src="./resources/sidebar_icons/ui-46.png" alt="settings icon">
+            <div id="settings">Setting</div>
+        </a>
+    </div>
+    <section class="main">
+        <img id="channel_back" src="./resources/Channel_back.png" alt="" width="1595px" height="280px">
+        <div id="sec_auth">
+                <a id="author">
+                    <img id="author_pic" src="./resources/sidebar_icons/subscriprions/Oval2.png" alt="">
+                    <div id="author_inf">
+                        <div id="author_name">Margaret Phelps</div>
+                        <div id="author_subs">245K subscribed</div>
+                    </div>
+                </a>
+                <div class="buttons_sec">
+                    <a id="sec_notify_a">
+                        <img id="sec_notify" src="./resources/topbar_icons/icons/ui-11.png" alt="">
+                    </a>
+                    <div id="subscribe_button">Subscribe 2.3m</div>
+                </div>
+        </div>
+        <div class="channel_menu">
+            <a id="home_sec" href="">
+                <div id="home_button">Home</div>
+                <div id="underscore"></div>
+            </a>
+            <a href="">
+                <div id="videos_button">Videos</div>
+            </a>
+            <a href="">
+                <div id="playlist_button">Playlists</div>
+            </a>
+            <a href="">
+                <div id="channels_button">Channels</div>
+            </a>
+            <a href="">
+                <div id="discussion_button">Discussion</div>
+            </a>
+            <a href="">
+                <div id="about_button">About</div>
+            </a>
+            <a href="">
+                <img src="./resources/topbar_icons/Shape.png" alt="" height="19px">
+            </a>
+        </div>
+        <div class="center">
+            <div class="prev_video">
+                    <a class="video">
+                        <div class="prev_preview">
+                            <img src="./resources/videos/Cover.png" alt="">
+                                <div class="time">
+                                    <div class="time_text">7:36</div>
+                                </div>
+                            </img> 
+                        </div>
+                        <div class="prev_info">
+                            <div id="video_name">Choosing The Best Audio Player Software For Your Computer</div>
+                            <div id="video_description">Your cheap internet-based banner advertising will become one of the sought for ads there are. Today, the world of Internet advertising is rapidly evolving beyond banner ads and intrusive pop-ups. Bayles A common medium for advertising on the Internet is the use of banner ads. </div>
+                            <div id="video_info">11k views  ·  6 months ago</div>
+                        </div>
+                    </a>
+            </div>
+            <div class="recommended_channels">
+                <div id="rec_title">Recommended channel</div>
+                <a href="">
+                    <img src="./resources/rec_authors/Oval.png" alt="">
+                    <div>Flora Benson</div>
+                </a>
+                <a href="">
+                    <img src="./resources/rec_authors/Oval_1.png" alt="">
+                    <div>Violet Cobb</div>
+                </a>
+                <a href="">
+                    <img src="./resources/rec_authors/Oval_2.png" alt="">
+                    <div>Phillip Mullins</div>
+                </a>
+            </div>
+        </div>
+        <section id="Dollie_Blair">
+            <div id="sec">
+                <a id="video_sec">
+                    <div id="video_sec_name">Margaret Phelps videos</div>
+                </a>
+                <div class="buttons_sec">
+                    <a>
+                        <img src="./resources/videos/Left.png" alt="">
+                    </a>
+                    <a>
+                        <img src="./resources/videos/Right.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="videos">
+                <a class="video">
+                    <div class="preview">
+                        <img src="./resources/videos/Cover (0).png" alt="">
+                            <div class="time">
+                                <div class="time_text">4:15</div>
+                            </div>
+                        </img> 
+                    </div>
+                    <div class="video_name">A Brief History Of Creation</div>
+                    <div class="info">
+                        <div class="video_info">80k views · 3 days ago</div>
+                        <div class="video_author">Dollie Blair</div>
+                    </div>
+                </a>
+                <a class="video">
+                    <div class="preview">
+                        <img src="./resources/videos/Cover (1).png" alt="">
+                            <div class="time">
+                                <div class="time_text">8:00</div>
+                            </div>
+                        </img> 
+                    </div>
+                    <div class="video_name">Selecting The Right Hotel</div>
+                    <div class="info">
+                        <div class="video_info">123k views  ·  1 months ago</div>
+                        <div class="video_author">Dollie Blair</div>
+                    </div>
+                </a>
+                <a class="video">
+                    <div class="preview">
+                        <img src="./resources/videos/Cover (2).png" alt="">
+                            <div class="time">
+                                <div class="time_text">5:32</div>
+                            </div>
+                        </img> 
+                    </div>
+                    <div class="video_name">Asteroids</div>
+                    <div class="info">
+                        <div class="video_info">43k views  ·  12 days ago</div>
+                        <div class="video_author">Dollie Blair</div>
+                    </div>
+                </a>
+                <a class="video">
+                    <div class="preview">
+                        <img src="./resources/videos/Cover (3).png" alt="">
+                            <div class="time">
+                                <div class="time_text">6:40</div>
+                            </div>
+                        </img> 
+                    </div>
+                    <div class="video_name">Telescopes 101</div>
+                    <div class="info">
+                        <div class="video_info">11k views  ·  6 months ago</div>
+                        <div class="video_author">Dollie Blair</div>
+                    </div>
+                </a>
+                <a class="video">
+                    <div class="preview">
+                        <img src="./resources/videos/Cover (4).png" alt="">
+                            <div class="time">
+                                <div class="time_text">1:45</div>
+                            </div>
+                        </img> 
+                    </div>
+                    <div class="video_name">Medical Care Is Just</div>
+                    <div class="info">
+                        <div class="video_info">18k views  ·  2 days ago</div>
+                        <div class="video_author">Dollie Blair</div>
+                    </div>
+                </a>
+                <a class="video">
+                    <div class="preview">
+                        <img src="./resources/videos/Cover (5).png" alt="">
+                            <div class="time">
+                                <div class="time_text">2:15</div>
+                            </div>
+                        </img> 
+                    </div>
+                    <div class="video_name">Moon Gazing</div>
+                    <div class="info">
+                        <div class="video_info">67k views  ·  4 months ago</div>
+                        <div class="video_author">Dollie Blair</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </section>
+</body>
+</html>
