@@ -1,0 +1,218 @@
+.sidebar{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 84vh;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+    position: fixed;
+    top: 114px;
+}
+
+.sidebar:hover {
+  overflow-y: auto;
+}
+
+
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    left: 31px;
+}
+
+.sidebar a{
+    display: flex;
+}
+
+.sidebar a:hover{
+    cursor: pointer;
+}
+
+#menu, a, div{
+    position: relative;
+    font-family: "Mulish", sans-serif;
+    color: #898989;
+    justify-content: space-between;
+}
+
+#home{
+    color: #FF0000 !important;
+}
+
+.home{
+    width: 78px;
+    height: 20px;
+}
+
+#home_ico{
+    width: 20px;
+    height: 19px;
+}
+
+.trending{
+    width: 96px;
+    height: 21px;
+}
+
+#trending_ico{
+    width: 16px;
+    height: 21px;
+}
+
+.subscriptions{
+    width: 132px;
+    height: 20px;
+}
+
+#subscriptions_ico{
+    width: 18px;
+    height: 18px;
+}
+
+.library{
+    width: 86px;
+    height: 20px;
+}
+
+#library_ico{
+    width: 20px;
+    height: 16px;
+}
+
+.history{
+    width: 87px;
+    height: 20px;
+}
+
+#history_ico{
+    width: 20px;
+    height: 18px;
+}
+
+.watch_later{
+    width: 119px;
+    height: 20px;
+}
+
+#watch_later_ico{
+    width: 17px;
+    height: 19px;
+}
+
+.favourites{
+    width: 110px;
+    height: 20px;
+}
+
+#favourites_ico{
+    width: 19px;
+    height: 18px;
+}
+
+.liked_videos{
+    width: 123px;
+    height: 20px;
+}
+
+#liked_videos_ico{
+    width: 18px;
+    height: 17px;
+}
+
+.music{
+    width: 75px;
+    height: 20px;
+}
+
+#music_ico{
+    width: 18px;
+    height: 20px;
+}
+
+.games{
+    width: 86px;
+    height: 20px;
+}
+
+#games_ico{
+    width: 22px;
+    height: 16px;
+}
+
+.show_more{
+    width: 115px;
+    height: 20px;
+}
+
+#show_more_ico{
+    margin-top: 8px;
+    margin-left: 4px;
+    width: 14px;
+    height: 8px;
+}
+
+#subscriptions_menu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 159px;
+    height: 324px;
+    left: 31px;
+    gap: 30px;
+}
+
+#subscriptions_menu #subs a{
+    position: relative;
+    font-family: "Mulish", sans-serif;
+    color: #898989;
+    gap: 10px;
+    align-items: center;
+}
+
+#subscriptions_menu #subs a{
+    width: 159px;
+    justify-content: start;
+}
+
+#subscriptions_title{
+    font-family: "Mulish", sans-serif;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#subs{
+    width: 159px;
+    height: 271px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#subscriptions_menu #subs a img{
+    width: 26px;
+    height: 26px;
+}
+
+.settings{
+    position: relative;
+    display: flex;
+    width: 84px;
+    height: 20px;
+    left: 34px;
+    justify-content: space-between;
+}
+
+#settings_ico{
+    width: 19px;
+    height: 20px;
+}
+
+#settings{
+    position: relative;
+    font-family: "Mulish", sans-serif;
+    color: #898989;
+}

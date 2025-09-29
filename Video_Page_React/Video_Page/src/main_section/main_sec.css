@@ -1,0 +1,407 @@
+.main{
+    /* background-color: aqua; */
+    width: 1800px;
+    height: 1325px;
+    margin-top: 94px;
+    justify-self: center;
+    display: flex;
+}
+
+#video_screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main_video_prev img{
+    width: 1363px;
+    height: 700px;
+}
+
+#main_nav{
+    position: absolute;
+    /* background-color: antiquewhite; */
+    top: 570px;
+    width: 1297px;
+    height: 120px;
+}
+
+#time_sec{
+    display: flex;
+    justify-content: space-between;
+}
+
+#time_sec div{
+    font-family: "Mulish", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+#timeline_sec{
+    margin-top: 20px;
+    width: 1297px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #FFFFFF33;
+}
+
+#progress{
+    height: 10px;
+    background-color: #FF0000;
+    border-radius: 5px;
+    width: 280px;
+}
+
+#video_nav_sec{
+    display: flex;
+    justify-content: space-between;
+}
+
+#left_part{
+    margin-left: 10px;
+    margin-top: 21px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: start;
+    align-items: center;
+}
+
+#pause_ico{
+    width: 22px;
+    height: 24px;
+}
+
+#next_ico{
+    width: 27px;
+    height: 18px;
+}
+
+#volume_sec{
+    width: 130px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+#volume_ico{
+    width: 24px;
+}
+
+#volume_bar{
+    width: 86px;
+    height: 8px;
+    background-color: #FFFFFF33;
+    border-radius: 4px;
+}
+
+#volume_progress{
+    width: 36px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+}
+
+#right_part{
+    margin-right: 10px;
+    margin-top: 21px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+#sub_ico{
+    height: 18px;
+}
+
+#set_ico{
+    height: 27px;
+}
+
+#size_ico{
+    height: 21px;
+}
+
+#screen_ico{
+    height: 24px;
+}
+
+#name{
+    margin-top: 20px;
+    font-family: "Mulish", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #192646;
+}
+
+#under_vid_section{
+    margin-top: 14px;
+    display: flex;
+}
+
+#views{
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #C2C2C2;   
+}
+
+#likes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    background-color: rgba(235, 235, 235, 0.3);
+    border-radius: 20px;
+}
+
+#dislikes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    background-color: rgba(235, 235, 235, 0.3);
+    border-radius: 20px;
+}
+
+#share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    background-color: rgba(235, 235, 235, 0.3);
+    border-radius: 20px;
+}
+
+#like_ico{
+    height: 13px;
+}
+
+#dislike_ico{
+    height: 13px;
+}
+
+#share_ico{
+    height: 12px;
+}
+
+#under_vid_section div div{
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #192646; 
+}
+
+.cover{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+}
+
+#more{
+    margin-left: 30px;
+    align-items: center;
+    margin-top: -4px;
+}
+
+#more_ico{
+    height: 6px;
+}
+
+#right{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#hr{
+    margin-top: 15px;
+    width: 1363px;
+    height: 1px;
+    background-color: #D8D8D880;
+}
+
+.description_section{
+    height: 195px;
+    display: flex;
+}
+
+#description{
+    width: 912px;
+    margin-top: 38px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+#description_right_sec{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#desc_auth_name{
+    font-family: "Mulish", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #19202C; 
+}
+
+#published_data{
+    font-family: "Mulish", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #C2C2C2; 
+    margin-top: -8px;
+}
+
+#description_text{
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000; 
+    opacity: 60%;
+}
+
+#show_button{
+    font-family: "Mulish", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #C2C2C2; 
+}
+
+#subscribe_button{
+    margin-top: 38px;
+    width: 154px;
+    height: 40px;
+    background-color: #FF0000;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#subscribe_button div{
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF; 
+}                
+
+#rec_videos{
+    margin-left: 40px;
+}
+
+#rec_top_sec{
+    display: flex;
+}
+
+#next_text{
+    align-items: center;
+    font-family: "Mulish", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #19202C; 
+}
+
+#autoplay_sec{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+#autoplay_text{
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #19202C; 
+    text-transform: uppercase;
+}
+
+#switch{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 44px;
+    height: 28px;
+    background-color: rgb(235, 235, 235, 30%);
+    border-radius: 14px;
+}
+
+#switch_in{
+    width: 24px;
+    height: 24px;
+    background-color: #2196F3;
+    border-radius: 14px;  
+    box-shadow: 0px 1px 1px #0000003D; 
+}
+
+#video_sec{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 23px;
+}
+
+#preview_sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#preview{
+    width: 367px;
+    height: 213px;
+}
+
+#video_time{
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 300px;
+    width: 47px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#time_text{
+    opacity: 130%;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+#video_name{
+    margin-top: 13px;
+    font-weight: 700;
+    font-size: 26px;
+    color: #19202C;
+}
+
+#video_inf{
+    margin-top: 11px;
+    display: flex;
+}
+
+#views_rec{
+    font-weight: 400;
+    font-size: 18px;
+    color: #C2C2C2;
+    display: flex;
+}
+
+#author{
+    font-weight: 400;
+    font-size: 18px;
+    color: #C2C2C2;
+    display: flex;
+}

@@ -1,0 +1,138 @@
+#top_section{
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    background-color: #FFFFFF;
+    width: 100vw;
+    height: 65px;
+}
+
+#top_section a:hover{
+    cursor: pointer;
+}
+
+#menu_button{
+    position: absolute;
+    top: 34px;
+    left: 32px;
+}
+
+#logo{
+    position: absolute;
+    left: 80px;
+    top: 30px; 
+}
+
+.search{
+    display: flex;
+    position: absolute;
+    top: 20px;
+    left: 255px;
+}
+
+#search_field{
+   width: 830px; 
+   height: 44px;
+   border-radius: 22px;
+   opacity: 30%;
+   border: 0;
+   display: flex;
+   position: relative;
+   background-color: #EBEBEB;
+}
+
+@media (max-width: 1460px) {
+    .search{
+        width: 50%;
+    }
+    #search_field {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1220px) {
+    .search{
+        width: 40%;
+    }
+    #search_field {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1010px) {
+    #rec_channel{
+        visibility: hidden;
+    }
+    .search{
+        width: 30%;
+    }
+    #search_field {
+        width: 100%;
+    }
+}
+
+@media (max-width: 860px) {
+    .search{
+        width: 20%;
+    }
+    #search_field {
+        width: 100%;
+    }
+}
+
+#search_text{
+    position: relative;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin: auto;
+    margin-left: 20px;
+}
+
+.search_icon{
+    position: absolute;
+    right: 15px;
+    margin-top: 12.5px;
+}
+
+.right_part{
+    display: flex;
+}
+
+.icons{
+    position: fixed;
+    top: 23px;
+    right: 155px; 
+    width: 175px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#notifications{
+    display: flex;
+    align-items: center;
+}
+
+#notify_oval{
+    position: absolute;
+    margin-bottom: 17px;
+    margin-left: 7px;
+}
+
+#notify_count{
+    font-family: "Mulish", sans-serif;
+    position: absolute;
+    margin-bottom: 17px;
+    margin-left: 13px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.user_pic{
+    position: fixed;
+    top: 22px;
+    right: 70px;
+}
