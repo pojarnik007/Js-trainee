@@ -144,13 +144,13 @@ body{
 .sidebar{
     overflow-y: hidden;
     overflow-x: hidden;
-    height: 84vh;
+    height: 90vh;
     width: 220px;
     display: flex;
     flex-direction: column;
     gap: 58px;
     position: fixed;
-    top: 114px;
+    top: 59px;
 }
 
 .sidebar:hover {
@@ -160,6 +160,7 @@ body{
 
 
 #menu{
+    top: 55px;
     display: flex;
     flex-direction: column;
     gap: 29px;
@@ -301,6 +302,7 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
+    top: 55px;
     width: 159px;
     height: 324px;
     left: 31px;
@@ -341,6 +343,7 @@ body{
 }
 
 .settings{
+    top: 55px;
     position: relative;
     display: flex;
     width: 84px;
@@ -552,6 +555,14 @@ body{
     color: #000000;
 }
 
+ #channels_button, #discussion_button, #about_button, #search_channel_menu, #playlist_button, #videos_button{
+    display: flex;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+ }
+
 .channel_menu a{
     text-decoration: none;
     align-items: center;
@@ -718,4 +729,281 @@ body{
     align-items: center;
     justify-content: center;
     right: -70px;
+}
+
+#logo2{
+    display: none;
+}
+
+#top_channel_name{
+    display: none;
+}
+
+#more_top_channel{
+    display: none;
+}
+
+#mobile_channel_back{
+    display: none;
+}
+
+#more_channel_menu{
+    display: none;
+}
+
+
+/* ---------------------------------------------------------------------------- */
+
+
+
+@media (max-width: 768px) {
+
+    #mobile_channel_back{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #channel_back{
+        display: none;
+    }
+
+    #logo{
+        display: none;
+    }
+
+    #logo2{
+        display: block;
+        position: absolute;
+        top: 12px;
+        left: 16px; 
+    }
+
+    #top_channel_name{
+        display: block;
+        font-family: "Mulish", sans-serif;
+        color: #19202C;
+        font-size: 16px;
+        font-weight: 700;
+        position: absolute;
+        width: 127px;
+        top: 14px;
+        left: 63px; 
+    }
+
+    .search{
+        display: flex;
+        position: absolute;
+        width: auto;
+        left: 0px;
+        height: 19px;
+        right: 80px;
+        margin-top: -4px;
+    }
+
+    .time{
+        right: 10px;
+        bottom: 15px;
+    }
+
+    .video{
+        width: 80%;
+    }
+
+    .video img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .user_pic img{
+        width: 30px;
+        height: 30px;
+    }
+
+    #user_img{
+        display: none;
+    }
+
+    #more_top_channel{
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        width: 5px;
+        height: 19px;
+    }
+
+    .search_icon{
+        right: 0px;
+        margin-top: 0px;
+    }
+
+    .user_pic{
+        position: fixed;
+        top: 10px;
+        right: 16px;
+    }
+
+    #menu_button{
+        display: none;
+    }
+
+    #search_field{
+        display: none;
+    }
+
+    .icons{
+        display: none;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+        width: 100%;
+        left: 0px;
+        padding-bottom: 70px;
+        top: 60px;
+    }
+
+    #sec_auth{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    #sec_notify_a{
+        display: none;
+    }
+
+    .buttons_sec{
+        width: 100%;
+        align-items: start;
+        margin-top: 45px;
+    }
+
+    #subscribe_button{
+        right: auto;
+        left: 16px;
+        height: 34px;
+        width: 120px;
+        font-size: 12px;
+    }
+
+    #author{
+        left: 16px;
+        width: 100%;
+        margin-top: -70px;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .channel_menu{
+        justify-content: space-around;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    #home_button{
+        font-weight: 700;
+    }
+
+    #channels_button, #discussion_button, #about_button, #search_channel_menu{
+        display: none;
+    }
+
+    #last_channel_button{
+        align-items: center;
+        display: flex;
+    }
+
+    .center{
+        display: none;
+    }
+
+    #more_channel_menu{
+        display: flex;
+    }
+
+    #menu{
+        width: 100%;
+        height: 100%;
+        left: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0px;
+    }
+
+    #menu div{
+        font-size: 10px
+    }
+
+    #space{
+        display: none !important;
+    }
+
+    #menu a{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #subscriptions_menu{
+        display: none;
+    }
+
+    .sidebar a{
+        display: none;
+    }
+
+    .settings{
+        display: none;
+    }
+
+    .home, .trending, .subscriptions, .library{
+        display: flex !important;
+    }
+
+
+    .sidebar {
+        top: auto;
+        position: fixed; 
+        left: 0;   
+        bottom: 0;       
+        width: 100%;        
+        height: 61px;      
+        display: flex;      
+        flex-direction: row;
+        justify-content: space-around; 
+        align-items: center;
+        background-color: #FFFFFF;
+        border-top: 1px solid #EBEBEB; 
+        z-index: 1;      
+    }
+
+    #Dollie_Blair{
+        margin-top: 16px;
+        height: auto;
+        width: 100%;
+        align-items: center;
+    }
+
+    #Recommended{
+        height: auto;
+    }
+
+    #Food_Drink{
+        height: auto;
+    }
+
+    #sec{
+        display: none;
+    }
+
+    .videos{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
 }

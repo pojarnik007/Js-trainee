@@ -146,13 +146,13 @@ body{
 .sidebar{
     overflow-y: hidden;
     overflow-x: hidden;
-    height: 84vh;
+    height: 90vh;
     width: 220px;
     display: flex;
     flex-direction: column;
     gap: 58px;
     position: fixed;
-    top: 114px;
+    top: 59px;
 }
 
 .sidebar:hover {
@@ -162,6 +162,7 @@ body{
 
 
 #menu{
+    top: 55px;
     display: flex;
     flex-direction: column;
     gap: 29px;
@@ -300,6 +301,7 @@ body{
 }
 
 #subscriptions_menu{
+    top: 55px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -343,6 +345,7 @@ body{
 }
 
 .settings{
+    top: 55px;
     position: relative;
     display: flex;
     width: 84px;
