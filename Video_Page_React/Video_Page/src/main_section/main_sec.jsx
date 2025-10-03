@@ -34,9 +34,23 @@ function Main_section() {
                             <img id='screen_ico' src="/main_video/Full Screen.png" alt="" />
                         </div>
                     </div>
+                    <div id='mobile_video_nav_sec'>
+                        <img id='pause_mob' src="/main_video/Pause.png" alt="" height='12px' />
+                        <div id='mob_center'>
+                            <div id='start_time_mob'>1:34</div>
+                            <div id='timeline_mob'>
+                                <div id='progress_mob'></div>
+                            </div>
+                            <div id='end_time_mob'>-10:00</div>
+                        </div>
+                        <img id='volume_mob' src="/main_video/Volume.png" alt="" height='12px' />
+                    </div>
                 </div>
             </div>
-            <div id='name'>Dude You Re Getting A Telescope</div>
+            <div id='name_sec'>
+                <div id='name'>Dude You Re Getting A Telescope</div>
+                <img id='arrow' src="/main_video/Right Arrow.png" alt="" height='7px'/>
+            </div>
             <div id='under_vid_section'>
                 <div id='views'>123k views</div>
                 <div id='right'>
@@ -70,14 +84,16 @@ function Main_section() {
                     <div id='description_right_sec'>
                         <div id='desc_auth_name'>Food & Drink</div>
                         <div id='published_data'>Published on 14 Jun 2019</div>
+                        <div id='subscribed'>245K subscribed</div>
                         <div id='description_text'>A successful marketing plan relies heavily on the pulling-power of advertising copy. Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action. There is no magic formula to write perfect ad copy; it is based on a number of factors, including ad placement, demographic, even the consumer’s mood when they see your ad. </div>
                         <a id='show_button'>Show more</a>
                     </div>
                 </div>
-                <a id='subscribe_button'><div>Subscribe 2.3m</div></a>
+                <a id='subscribe_button'><div id='desc'>Subscribe 2.3m</div><div id='mob'>Subscribe</div></a>
             </div>
         </div>
-        <div id='rec_videos'>
+        <div id='hr2'></div>
+        <div id='rec_videos'> 
             <div id='rec_top_sec'>
                 <div id='next_text'>Next</div>
                 <div id='autoplay_sec'>
@@ -121,8 +137,10 @@ function Main_section() {
                 </div>
                 <div id='video'>
                     <div id='preview_sec'>
-                        <img src="/rec_videos/Cover4.png" alt="" id='preview' />
-                        <div id='video_time'><div id='time_text'>8:00</div></div>
+                        <img src="/rec_videos/Cover4.png" alt="" id='preview'/>
+                            <div id='video_time'>
+                                <div id='time_text'>8:00</div>
+                            </div>
                     </div>
                     <div id='video_name'>Baby Monitor Technology</div>
                     <div id='video_inf'>

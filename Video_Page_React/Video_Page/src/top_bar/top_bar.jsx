@@ -31,7 +31,8 @@ function Top_bar() {
             </a>
         </div>
         <a className="user_pic">
-            <img src="/topbar_icons/Userpic.png" alt="User picture" height="40px" width="40px"></img>
+            <img id='user_img' src="/topbar_icons/Userpic.png" alt="User picture" height="40px" width="40px"></img>
+            <img id='more_top_channel' src="/topbar_icons/more_top_channel.png" alt="" />
         </a>
     </div>
   )

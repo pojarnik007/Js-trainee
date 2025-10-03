@@ -3,7 +3,8 @@
     display: flex;
     position: fixed;
     background-color: #FFFFFF;
-    width: 100vw;
+    width: 100%;
+    left: 0px;
     height: 65px;
 }
 
@@ -135,4 +136,74 @@
     position: fixed;
     top: 22px;
     right: 70px;
+}
+
+    #more_top_channel{
+        display: none;
+    }
+
+/* ---------------------------------------------------------------------------- */
+
+
+
+
+
+@media (max-width: 768px) {
+
+    #logo{
+        top: 12px;
+        left: 16px; 
+    }
+
+    .search{
+        display: flex;
+        position: absolute;
+        width: auto;
+        left: 0px;
+        height: 19px;
+        right: 80px;
+        margin-top: -4px;
+    }
+
+    .user_pic img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .search_icon{
+        right: 0px;
+        margin-top: 0px;
+    }
+
+    .user_pic{
+        position: fixed;
+        top: 10px;
+        right: 16px;
+    }
+
+    #user_img{
+        display: none;
+    }
+
+    #more_top_channel{
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        width: 5px;
+        height: 19px;
+    }
+
+    #menu_button{
+        display: none;
+    }
+
+    #search_field{
+        display: none;
+    }
+
+    .icons{
+        display: none;
+    }
+
 }
