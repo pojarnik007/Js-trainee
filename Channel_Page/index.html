@@ -210,15 +210,15 @@
                     <div id="video_sec_name">Margaret Phelps videos</div>
                 </a>
                 <div class="buttons_sec">
-                    <a>
+                    <a id="scroll-left-btn">
                         <img src="./resources/videos/Left.png" alt="">
                     </a>
-                    <a>
+                    <a id="scroll-right-btn">
                         <img src="./resources/videos/Right.png" alt="">
                     </a>
                 </div>
             </div>
-            <div class="videos">
+            <div class="videos" id="videos-container">
                 <a class="video">
                     <div class="preview">
                         <img src="./resources/videos/Cover (0).png" alt="">
@@ -306,5 +306,20 @@
             </div>
         </section>
     </section>
+
+    <script>
+        const scrollContainer = document.getElementById('videos-container');
+        const scrollLeftButton = document.getElementById('scroll-left-btn');
+        const scrollRightButton = document.getElementById('scroll-right-btn');
+        
+        const scrollAmount = 290;
+
+        scrollRightButton.addEventListener('click', () => {
+            scrollContainer.scrollLeft += scrollAmount;
+        });
+        scrollLeftButton.addEventListener('click', () => {
+            scrollContainer.scrollLeft -= scrollAmount;
+        });
+    </script>
 </body>
 </html>

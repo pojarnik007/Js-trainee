@@ -18,29 +18,27 @@
             <img id="logo" src="./resources/topbar_icons/Logo/Black.png" alt="logo" height="25px" width="116px">
         </a>
         <div class="search">
-            <div id="search_field">
-                <div id="search_text">Search</div>
-            </div>
+            <input type="text" id="search_input" placeholder="Search">
             <a class="search_icon">
                 <img id="search_icon" src="./resources/topbar_icons/Shape.png" alt="search logo" height="19px" width="19px">
             </a>
         </div>
-            <div class="icons">
-                <a>
-                    <img src="./resources/topbar_icons/icons/phone-18.png" alt="meeting" height="20px" width="27px">
-                </a>
-                <a>
-                    <img src="./resources/topbar_icons/icons/Combined Shape.png" alt="apps" height="21px" width="21px">
-                </a>
-                <a id="notifications">
-                    <img src="./resources/topbar_icons/icons/ui-11.png" alt="notifies" height="26px" width="22px">
-                    <img id="notify_oval" src="./resources/topbar_icons/icons/Oval.png" alt="notify alert" height="18px" width="18px">
-                    <div id="notify_count">3</div>
-                </a>
-            </div>
-            <a class="user_pic">
-                <img src="./resources/topbar_icons/Userpic.png" alt="User picture" height="40px" width="40px">
+        <div class="icons">
+            <a>
+                <img src="./resources/topbar_icons/icons/phone-18.png" alt="meeting" height="20px" width="27px">
             </a>
+            <a>
+                <img src="./resources/topbar_icons/icons/Combined Shape.png" alt="apps" height="21px" width="21px">
+            </a>
+            <a id="notifications">
+                <img src="./resources/topbar_icons/icons/ui-11.png" alt="notifies" height="26px" width="22px">
+                <img id="notify_oval" src="./resources/topbar_icons/icons/Oval.png" alt="notify alert" height="18px" width="18px">
+                <div id="notify_count">3</div>
+            </a>
+        </div>
+        <a class="user_pic">
+            <img src="./resources/topbar_icons/Userpic.png" alt="User picture" height="40px" width="40px">
+        </a>
     </div>
     <div class="sidebar">
         <aside id="menu">
@@ -133,15 +131,15 @@
                     <div id="author_name">Dollie Blair</div>
                 </a>
                 <div class="buttons_sec">
-                    <a>
+                    <a id="scroll-left-btn">
                         <img src="./resources/videos/Left.png" alt="">
                     </a>
-                    <a>
+                    <a id="scroll-right-btn">
                         <img src="./resources/videos/Right.png" alt="">
                     </a>
                 </div>
             </div>
-            <div class="videos">
+            <div class="videos"  id="videos-container">
                 <a class="video">
                     <div class="preview">
                         <img src="./resources/videos/Cover1.png" alt="">
@@ -226,6 +224,48 @@
                         <div class="video_author">Dollie Blair</div>
                     </div>
                 </a>
+                <a class="video">
+                    <div class="preview">
+                        <img src="./resources/videos/Cover1.png" alt="">
+                            <div class="time">
+                                <div class="time_text">4:15</div>
+                            </div>
+                        </img> 
+                    </div>
+                    <div class="video_name">A Brief History Of Creation</div>
+                    <div class="info">
+                        <div class="video_info">80k views · 3 days ago</div>
+                        <div class="video_author">Dollie Blair</div>
+                    </div>
+                </a>
+                <a class="video">
+                    <div class="preview">
+                        <img src="./resources/videos/Cover2.png" alt="">
+                            <div class="time">
+                                <div class="time_text">8:00</div>
+                            </div>
+                        </img> 
+                    </div>
+                    <div class="video_name">Selecting The Right Hotel</div>
+                    <div class="info">
+                        <div class="video_info">123k views  ·  1 months ago</div>
+                        <div class="video_author">Dollie Blair</div>
+                    </div>
+                </a>
+                <a class="video">
+                    <div class="preview">
+                        <img src="./resources/videos/Cover3.png" alt="">
+                            <div class="time">
+                                <div class="time_text">5:32</div>
+                            </div>
+                        </img> 
+                    </div>
+                    <div class="video_name">Asteroids</div>
+                    <div class="info">
+                        <div class="video_info">43k views  ·  12 days ago</div>
+                        <div class="video_author">Dollie Blair</div>
+                    </div>
+                </a>
             </div>
         </section>
         <section id="Recommended">
@@ -234,15 +274,15 @@
                     <div id="title">Recommended</div>
                 </a>
                     <div class="buttons_sec">
-                        <a>
+                        <a id="scroll2-left-btn">
                             <img src="./resources/videos/Left.png" alt="">
                         </a>
-                        <a>
+                        <a id="scroll2-right-btn">
                             <img src="./resources/videos/Right.png" alt="">
                         </a>
                     </div>
             </div>
-            <div class="videos">
+            <div class="videos"  id="videos2-container">
                 <a class="video">
                     <div class="rec_preview">
                         <img src="./resources/videos/recommended/Cover1.png" alt="">
@@ -296,15 +336,15 @@
                 <div id="rec_channel">Recommended channel for you</div>
                 <div class="buttons_sec">
                     <div id="subscribe_button">Subscribe 2.3m</div>
-                    <a>
+                    <a id="scroll3-left-btn">
                         <img src="./resources/videos/Left.png" alt="">
                     </a>
-                    <a>
+                    <a id="scroll3-right-btn">
                         <img src="./resources/videos/Right.png" alt="">
                     </a>
                 </div>
             </div>
-            <div class="videos">
+            <div class="videos"  id="videos3-container">
                 <a class="video">
                     <div class="preview">
                         <img src="./resources/videos/food&drink/Cover1.png" alt="">
@@ -392,5 +432,71 @@
             </div>
         </section>
     </div>
+<script>
+        const scrollContainer = document.getElementById('videos-container');
+        const scrollLeftButton = document.getElementById('scroll-left-btn');
+        const scrollRightButton = document.getElementById('scroll-right-btn');
+        const scroll2Container = document.getElementById('videos2-container');
+        const scroll2LeftButton = document.getElementById('scroll2-left-btn');
+        const scroll2RightButton = document.getElementById('scroll2-right-btn');
+        const scroll3Container = document.getElementById('videos3-container');
+        const scroll3LeftButton = document.getElementById('scroll3-left-btn');
+        const scroll3RightButton = document.getElementById('scroll3-right-btn');
+        
+        const scrollAmount = 290;
+
+        scrollRightButton.addEventListener('click', () => {
+            scrollContainer.scrollLeft += scrollAmount;
+        });
+        scrollLeftButton.addEventListener('click', () => {
+            scrollContainer.scrollLeft -= scrollAmount;
+        });
+
+        scroll2RightButton.addEventListener('click', () => {
+            scroll2Container.scrollLeft += 580;
+        });
+        scroll2LeftButton.addEventListener('click', () => {
+            scroll2Container.scrollLeft -= 580;
+        });
+
+        
+        scroll3RightButton.addEventListener('click', () => {
+            scroll3Container.scrollLeft += scrollAmount;
+        });
+        scroll3LeftButton.addEventListener('click', () => {
+            scroll3Container.scrollLeft -= scrollAmount;
+        });
+
+
+        const searchInput = document.getElementById('search_input');
+        const allVideos = document.querySelectorAll('.video'); 
+        const allSections = document.querySelectorAll('.main > section');
+
+        searchInput.addEventListener('input', function() {
+            const searchQuery = this.value.toLowerCase().trim();
+
+            allVideos.forEach(video => {
+                const titleElement = video.querySelector('.video_name');
+                const title = titleElement.textContent.toLowerCase();
+
+                if (title.includes(searchQuery)) {
+                    video.style.display = 'flex';
+                } else {
+                    video.style.display = 'none'; 
+                }
+            });
+
+
+            allSections.forEach(section => {
+                const visibleVideos = section.querySelectorAll('.video[style*="display: flex"]');
+                if (searchQuery.length > 0 && visibleVideos.length === 0) {
+                    section.style.display = 'none';
+                } else {
+                    section.style.display = 'flex'; 
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
