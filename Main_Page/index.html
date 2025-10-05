@@ -10,6 +10,12 @@
     <title>Home Page</title>
 </head>
 <body>
+    <div id="mobile-search-overlay" class="search-overlay-hidden">
+        <div class="search-bar-container">
+            <input type="text" id="mobile-search-input" placeholder="Search by name...">
+            <button id="close-search-btn">×</button>
+        </div>
+    </div>
     <div id="top_section">
         <a id="menu_button">
             <img src="./resources/topbar_icons/Menu.png" alt="menu button" height="17px" width="20px">
@@ -466,35 +472,61 @@
         scroll3LeftButton.addEventListener('click', () => {
             scroll3Container.scrollLeft -= scrollAmount;
         });
-
-
-        const searchInput = document.getElementById('search_input');
-        const allVideos = document.querySelectorAll('.video'); 
+    
+        const desktopSearchInput = document.getElementById('search_input');
+        const allVideos = document.querySelectorAll('.video');
         const allSections = document.querySelectorAll('.main > section');
 
-        searchInput.addEventListener('input', function() {
-            const searchQuery = this.value.toLowerCase().trim();
+ 
+        const mobileSearchIcon = document.querySelector('.search_icon');
+        const mobileSearchOverlay = document.getElementById('mobile-search-overlay');
+        const mobileSearchInput = document.getElementById('mobile-search-input');
+        const closeSearchBtn = document.getElementById('close-search-btn');
+
+
+        function filterContent(searchQuery) {
+            const query = searchQuery.toLowerCase().trim();
 
             allVideos.forEach(video => {
                 const titleElement = video.querySelector('.video_name');
                 const title = titleElement.textContent.toLowerCase();
-
-                if (title.includes(searchQuery)) {
-                    video.style.display = 'flex';
-                } else {
-                    video.style.display = 'none'; 
-                }
+                video.style.display = title.includes(query) ? 'flex' : 'none';
             });
-
 
             allSections.forEach(section => {
                 const visibleVideos = section.querySelectorAll('.video[style*="display: flex"]');
-                if (searchQuery.length > 0 && visibleVideos.length === 0) {
-                    section.style.display = 'none';
-                } else {
-                    section.style.display = 'flex'; 
-                }
+                section.style.display = (query.length > 0 && visibleVideos.length === 0) ? 'none' : 'flex';
             });
+        }
+
+
+        desktopSearchInput.addEventListener('input', function() {
+            filterContent(this.value);
+        });
+
+
+        mobileSearchInput.addEventListener('input', function() {
+            filterContent(this.value);
+        });
+
+      
+        mobileSearchIcon.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            mobileSearchOverlay.classList.remove('search-overlay-hidden');
+            mobileSearchInput.focus();
+        });
+
+        closeSearchBtn.addEventListener('click', function() {
+            mobileSearchOverlay.classList.add('search-overlay-hidden');
+            mobileSearchInput.value = '';
+            filterContent(''); 
+        });
+
+        mobileSearchInput.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); 
+                mobileSearchOverlay.classList.add('search-overlay-hidden');
+            }
         });
     </script>
 
