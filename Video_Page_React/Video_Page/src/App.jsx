@@ -6,8 +6,12 @@ import Top_bar from './top_bar/top_bar'
 function App() {
   return (
     <div className='App'>
+     
       <Top_bar></Top_bar>
-      <Main_section></Main_section>
+      <div id='content_inner'>
+        <Main_section></Main_section>
+        <Side_bar></Side_bar>
+      </div>
     </div>
     )
 }

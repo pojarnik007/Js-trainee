@@ -10,433 +10,438 @@
     <title>Home Page</title>
 </head>
 <body>
-    <div id="mobile-search-overlay" class="search-overlay-hidden">
-        <div class="search-bar-container">
-            <input type="text" id="mobile-search-input" placeholder="Search by name...">
-            <button id="close-search-btn">×</button>
-        </div>
-    </div>
-    <div id="top_section">
-        <a id="menu_button">
-            <img src="./resources/topbar_icons/Menu.png" alt="menu button" height="17px" width="20px">
-        </a>
-        <a>
-            <img id="logo" src="./resources/topbar_icons/Logo/Black.png" alt="logo" height="25px" width="116px">
-        </a>
-        <div class="search">
-            <input type="text" id="search_input" placeholder="Search">
-            <a class="search_icon">
-                <img id="search_icon" src="./resources/topbar_icons/Shape.png" alt="search logo" height="19px" width="19px">
-            </a>
-        </div>
-        <div class="icons">
-            <a>
-                <img src="./resources/topbar_icons/icons/phone-18.png" alt="meeting" height="20px" width="27px">
-            </a>
-            <a>
-                <img src="./resources/topbar_icons/icons/Combined Shape.png" alt="apps" height="21px" width="21px">
-            </a>
-            <a id="notifications">
-                <img src="./resources/topbar_icons/icons/ui-11.png" alt="notifies" height="26px" width="22px">
-                <img id="notify_oval" src="./resources/topbar_icons/icons/Oval.png" alt="notify alert" height="18px" width="18px">
-                <div id="notify_count">3</div>
-            </a>
-        </div>
-        <a class="user_pic">
-            <img src="./resources/topbar_icons/Userpic.png" alt="User picture" height="40px" width="40px">
-        </a>
-    </div>
-    <div class="sidebar">
-        <aside id="menu">
-            <a class="home">
-                <img id="home_ico" src="./resources/sidebar_icons/ui-71.png" alt="">
-                <div id="home">Home</div>
-            </a>
-            <a class="trending">
-                <img id="trending_ico" src="./resources/sidebar_icons/Path-957-Copy.png" alt="">
-                <div id="trending">Trending</div>
-            </a>
-            <a class="subscriptions">
-                <img id="subscriptions_ico" src="./resources/sidebar_icons/ui-45.png" alt="">
-                <div id="subscriptions">Subscriptions</div>
-            </a>
-            <a id="space"></a>
-            <a class="library">
-                <img id="library_ico" src="./resources/sidebar_icons/documents-11.png" alt="">
-                <div id="library">Library</div>
-            </a>
-            <a class="history">
-                <img id="history_ico" src="./resources/sidebar_icons/others-07.png" alt="">
-                <div id="history">History</div>
-            </a>
-            <a class="watch_later">
-                <img id="watch_later_ico" src="./resources/sidebar_icons/tech-25.png" alt="">
-                <div id="watch_later">Watch later</div>
-            </a>
-            <a class="favourites">
-                <img id="favourites_ico" src="./resources/sidebar_icons/ui-02.png" alt="">
-                <div id="favourites">Favourites</div>
-            </a>
-            <a class="liked_videos">
-                <img id="liked_videos_ico" src="./resources/sidebar_icons/ui-03.png" alt="">
-                <div id="liked_videos">Liked videos</div>
-            </a>
-            <a class="music">
-                <img id="music_ico" src="./resources/sidebar_icons/ui-80.png" alt="">
-                <div id="music">Music</div>
-            </a>
-            <a class="games">
-                <img id="games_ico" src="./resources/sidebar_icons/tech-02.png" alt="">
-                <div id="games">Games</div>
-            </a>
-            <a class="show_more">
-                <img id="show_more_ico" src="./resources/sidebar_icons/chevron-down.png" alt="">
-                <div id="show_more">Show more</div>
-            </a>
-        </aside>
-        <aside id="subscriptions_menu">
-            <div id="subscriptions_title">Subscriptions</div>
-            <div id="subs">
-                <a class="sub1">
-                    <img id="sub1_pic" src="./resources/sidebar_icons/subscriprions/Oval1.png" alt="">
-                    <div id="sub1">Gussie Singleton</div>
-                </a>
-                <a class="sub2">
-                    <img id="sub2_pic" src="./resources/sidebar_icons/subscriprions/Oval2.png" alt="">
-                    <div id="sub2">Nora Francis</div>
-                </a>
-                <a class="sub3">
-                    <img id="sub3_pic" src="./resources/sidebar_icons/subscriprions/Oval3.png" alt="">
-                    <div id="sub3">Belle Briggs</div>
-                </a>
-                <a class="sub4">
-                    <img id="sub4_pic" src="./resources/sidebar_icons/subscriprions/Oval4.png" alt="">
-                    <div id="sub4">Eunice Cortez</div>
-                </a>
-                <a class="sub5">
-                    <img id="sub5_pic" src="./resources/sidebar_icons/subscriprions/Oval5.png" alt="">
-                    <div id="sub5">Emma Hanson</div>
-                </a>
-                <a class="sub6">
-                    <img id="sub6_pic" src="./resources/sidebar_icons/subscriprions/Oval6.png" alt="">
-                    <div id="sub6">Leah Berry</div>
+    <div id="content_container">
+        <div id="top_section">
+            <div class="topbar-left">
+                <a id="menu_button">
+                    <img src="./resources/topbar_icons/Menu.png" alt="menu button">
+                </a> 
+                <a>
+                    <img id="logo" src="./resources/topbar_icons/Logo/Black.png" alt="logo">
                 </a>
             </div>
-        </aside>
-        <a class="settings">
-            <img id="settings_ico" src="./resources/sidebar_icons/ui-46.png" alt="settings icon">
-            <div id="settings">Setting</div>
-        </a>
-    </div>
-    
-    <section class="main">
-        <section id="Dollie_Blair">
-            <div id="sec">
-                <a id="author">
-                    <img id="author_pic" src="./resources/sidebar_icons/subscriprions/Oval1.png" alt="">
-                    <div id="author_name">Dollie Blair</div>
+            
+            <div class="search">
+                <div id="search_field">
+                    <div id="search_text">Search</div>
+                </div>
+                <a class="search_icon">
+                    <img id="search_icon" src="./resources/topbar_icons/Shape.png" alt="search logo">
                 </a>
-                <div class="buttons_sec">
-                    <a id="scroll-left-btn">
-                        <img src="./resources/videos/Left.png" alt="">
+            </div>
+
+            <div class="topbar-right">
+                <div class="icons">
+                    <a>
+                        <img src="./resources/topbar_icons/icons/phone-18.png" alt="meeting">
                     </a>
-                    <a id="scroll-right-btn">
-                        <img src="./resources/videos/Right.png" alt="">
+                    <a>
+                        <img src="./resources/topbar_icons/icons/Combined Shape.png" alt="apps">
+                    </a>
+                    <a id="notifications">
+                        <img src="./resources/topbar_icons/icons/ui-11.png" alt="notifies">
+                        <img id="notify_oval" src="./resources/topbar_icons/icons/Oval.png" alt="notify alert">
+                        <div id="notify_count">3</div>
                     </a>
                 </div>
-            </div>
-            <div class="videos"  id="videos-container">
-                <a class="video">
-                    <div class="preview">
-                        <img src="./resources/videos/Cover1.png" alt="">
-                            <div class="time">
-                                <div class="time_text">4:15</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">A Brief History Of Creation</div>
-                    <div class="info">
-                        <div class="video_info">80k views · 3 days ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-                <a class="video">
-                    <div class="preview">
-                        <img src="./resources/videos/Cover2.png" alt="">
-                            <div class="time">
-                                <div class="time_text">8:00</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">Selecting The Right Hotel</div>
-                    <div class="info">
-                        <div class="video_info">123k views  ·  1 months ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-                <a class="video">
-                    <div class="preview">
-                        <img src="./resources/videos/Cover3.png" alt="">
-                            <div class="time">
-                                <div class="time_text">5:32</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">Asteroids</div>
-                    <div class="info">
-                        <div class="video_info">43k views  ·  12 days ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-                <a class="video">
-                    <div class="preview">
-                        <img src="./resources/videos/Cover4.png" alt="">
-                            <div class="time">
-                                <div class="time_text">6:40</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">Telescopes 101</div>
-                    <div class="info">
-                        <div class="video_info">11k views  ·  6 months ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-                <a class="video">
-                    <div class="preview">
-                        <img src="./resources/videos/Cover5.png" alt="">
-                            <div class="time">
-                                <div class="time_text">1:45</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">Medical Care Is Just</div>
-                    <div class="info">
-                        <div class="video_info">18k views  ·  2 days ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-                <a class="video">
-                    <div class="preview">
-                        <img src="./resources/videos/Cover6.png" alt="">
-                            <div class="time">
-                                <div class="time_text">2:15</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">Moon Gazing</div>
-                    <div class="info">
-                        <div class="video_info">67k views  ·  4 months ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-                <a class="video">
-                    <div class="preview">
-                        <img src="./resources/videos/Cover1.png" alt="">
-                            <div class="time">
-                                <div class="time_text">4:15</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">A Brief History Of Creation</div>
-                    <div class="info">
-                        <div class="video_info">80k views · 3 days ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-                <a class="video">
-                    <div class="preview">
-                        <img src="./resources/videos/Cover2.png" alt="">
-                            <div class="time">
-                                <div class="time_text">8:00</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">Selecting The Right Hotel</div>
-                    <div class="info">
-                        <div class="video_info">123k views  ·  1 months ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-                <a class="video">
-                    <div class="preview">
-                        <img src="./resources/videos/Cover3.png" alt="">
-                            <div class="time">
-                                <div class="time_text">5:32</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">Asteroids</div>
-                    <div class="info">
-                        <div class="video_info">43k views  ·  12 days ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
+                <a class="user_pic">
+                    <img id="user_img" src="./resources/topbar_icons/Userpic.png" alt="User picture">
                 </a>
             </div>
-        </section>
-        <section id="Recommended">
-            <div id="sec">
-                <a id="author">
-                    <div id="title">Recommended</div>
-                </a>
-                    <div class="buttons_sec">
-                        <a id="scroll2-left-btn">
-                            <img src="./resources/videos/Left.png" alt="">
+        </div>
+        <div id="content_inner">
+            <div class="sidebar">
+                <aside id="menu">
+                    <a class="home">
+                        <img id="home_ico" src="./resources/sidebar_icons/ui-71.png" alt="">
+                        <div id="home">Home</div>
+                    </a>
+                    <a class="trending">
+                        <img id="trending_ico" src="./resources/sidebar_icons/Path-957-Copy.png" alt="">
+                        <div id="trending">Trending</div>
+                    </a>
+                    <a class="subscriptions">
+                        <img id="subscriptions_ico" src="./resources/sidebar_icons/ui-45.png" alt="">
+                        <div id="subscriptions">Subscriptions</div>
+                    </a>
+                    <a></a>
+                    <a class="library">
+                        <img id="library_ico" src="./resources/sidebar_icons/documents-11.png" alt="">
+                        <div id="library">Library</div>
+                    </a>
+                    <a class="history">
+                        <img id="history_ico" src="./resources/sidebar_icons/others-07.png" alt="">
+                        <div id="history">History</div>
+                    </a>
+                    <a class="watch_later">
+                        <img id="watch_later_ico" src="./resources/sidebar_icons/tech-25.png" alt="">
+                        <div id="watch_later">Watch later</div>
+                    </a>
+                    <a class="favourites">
+                        <img id="favourites_ico" src="./resources/sidebar_icons/ui-02.png" alt="">
+                        <div id="favourites">Favourites</div>
+                    </a>
+                    <a class="liked_videos">
+                        <img id="liked_videos_ico" src="./resources/sidebar_icons/ui-03.png" alt="">
+                        <div id="liked_videos">Liked videos</div>
+                    </a>
+                    <a class="music">
+                        <img id="music_ico" src="./resources/sidebar_icons/ui-80.png" alt="">
+                        <div id="music">Music</div>
+                    </a>
+                    <a class="games">
+                        <img id="games_ico" src="./resources/sidebar_icons/tech-02.png" alt="">
+                        <div id="games">Games</div>
+                    </a>
+                    <a class="show_more">
+                        <img id="show_more_ico" src="./resources/sidebar_icons/chevron-down.png" alt="">
+                        <div id="show_more">Show more</div>
+                    </a>
+                </aside>
+                <aside id="subscriptions_menu">
+                    <div id="subscriptions_title">Subscriptions</div>
+                    <div id="subs">
+                        <a class="sub1">
+                            <img id="sub1_pic" src="./resources/sidebar_icons/subscriprions/Oval1.png" alt="">
+                            <div id="sub1">Gussie Singleton</div>
                         </a>
-                        <a id="scroll2-right-btn">
-                            <img src="./resources/videos/Right.png" alt="">
+                        <a class="sub2">
+                            <img id="sub2_pic" src="./resources/sidebar_icons/subscriprions/Oval2.png" alt="">
+                            <div id="sub2">Nora Francis</div>
+                        </a>
+                        <a class="sub3">
+                            <img id="sub3_pic" src="./resources/sidebar_icons/subscriprions/Oval3.png" alt="">
+                            <div id="sub3">Belle Briggs</div>
+                        </a>
+                        <a class="sub4">
+                            <img id="sub4_pic" src="./resources/sidebar_icons/subscriprions/Oval4.png" alt="">
+                            <div id="sub4">Eunice Cortez</div>
+                        </a>
+                        <a class="sub5">
+                            <img id="sub5_pic" src="./resources/sidebar_icons/subscriprions/Oval5.png" alt="">
+                            <div id="sub5">Emma Hanson</div>
+                        </a>
+                        <a class="sub6">
+                            <img id="sub6_pic" src="./resources/sidebar_icons/subscriprions/Oval6.png" alt="">
+                            <div id="sub6">Leah Berry</div>
                         </a>
                     </div>
-            </div>
-            <div class="videos"  id="videos2-container">
-                <a class="video">
-                    <div class="rec_preview">
-                        <img src="./resources/videos/recommended/Cover1.png" alt="">
-                            <div class="time">
-                                <div class="time_text">4:15</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">A Brief History Of Creation</div>
-                    <div class="info">
-                        <div class="video_info">80k views · 3 days ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-                <a class="video">
-                    <div class="rec_preview">
-                        <img src="./resources/videos/recommended/Cover2.png" alt="">
-                            <div class="time">
-                                <div class="time_text">8:00</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">Selecting The Right Hotel</div>
-                    <div class="info">
-                        <div class="video_info">123k views  ·  1 months ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-                <a class="video">
-                    <div class="rec_preview">
-                        <img src="./resources/videos/recommended/Cover3.png" alt="">
-                            <div class="time">
-                                <div class="time_text">5:32</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">Asteroids</div>
-                    <div class="info">
-                        <div class="video_info">43k views  ·  12 days ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
+                </aside>
+                <a class="settings">
+                    <img id="settings_ico" src="./resources/sidebar_icons/ui-46.png" alt="settings icon">
+                    <div id="settings">Setting</div>
                 </a>
             </div>
-        </section>
-        <section id="Food_Drink">
-            <div id="sec">
-                <a id="author">
-                    <img id="author_pic" src="./resources/videos/food&drink/foodLogo.png" alt="">
-                    <div id="author_name">Food & Drink</div>
-                </a>
-                <div id="rec_channel">Recommended channel for you</div>
-                <div class="buttons_sec">
-                    <div id="subscribe_button">Subscribe 2.3m</div>
-                    <a id="scroll3-left-btn">
-                        <img src="./resources/videos/Left.png" alt="">
-                    </a>
-                    <a id="scroll3-right-btn">
-                        <img src="./resources/videos/Right.png" alt="">
-                    </a>
-                </div>
+            <div class="main">
+                <section id="Dollie_Blair">
+                    <div id="sec">
+                        <a id="author">
+                            <img id="author_pic" src="./resources/sidebar_icons/subscriprions/Oval1.png" alt="">
+                            <div id="author_name">Dollie Blair</div>
+                        </a>
+                        <div class="buttons_sec">
+                            <a id="scroll-left-btn">
+                                <img src="./resources/videos/Left.png" alt="">
+                            </a>
+                            <a id="scroll-right-btn">
+                                <img src="./resources/videos/Right.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="videos"  id="videos-container">
+                        <a class="video">
+                            <div class="preview">
+                                <img src="./resources/videos/Cover1.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">4:15</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">A Brief History Of Creation</div>
+                            <div class="info">
+                                <div class="video_info">80k views · 3 days ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                        <a class="video">
+                            <div class="preview">
+                                <img src="./resources/videos/Cover2.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">8:00</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">Selecting The Right Hotel</div>
+                            <div class="info">
+                                <div class="video_info">123k views  ·  1 months ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                        <a class="video">
+                            <div class="preview">
+                                <img src="./resources/videos/Cover3.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">5:32</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">Asteroids</div>
+                            <div class="info">
+                                <div class="video_info">43k views  ·  12 days ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                        <a class="video">
+                            <div class="preview">
+                                <img src="./resources/videos/Cover4.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">6:40</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">Telescopes 101</div>
+                            <div class="info">
+                                <div class="video_info">11k views  ·  6 months ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                        <a class="video">
+                            <div class="preview">
+                                <img src="./resources/videos/Cover5.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">1:45</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">Medical Care Is Just</div>
+                            <div class="info">
+                                <div class="video_info">18k views  ·  2 days ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                        <a class="video">
+                            <div class="preview">
+                                <img src="./resources/videos/Cover6.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">2:15</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">Moon Gazing</div>
+                            <div class="info">
+                                <div class="video_info">67k views  ·  4 months ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                        <a class="video">
+                            <div class="preview">
+                                <img src="./resources/videos/Cover1.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">4:15</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">A Brief History Of Creation</div>
+                            <div class="info">
+                                <div class="video_info">80k views · 3 days ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                        <a class="video">
+                            <div class="preview">
+                                <img src="./resources/videos/Cover2.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">8:00</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">Selecting The Right Hotel</div>
+                            <div class="info">
+                                <div class="video_info">123k views  ·  1 months ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                        <a class="video">
+                            <div class="preview">
+                                <img src="./resources/videos/Cover3.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">5:32</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">Asteroids</div>
+                            <div class="info">
+                                <div class="video_info">43k views  ·  12 days ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                <section id="Recommended">
+                    <div id="sec">
+                        <a id="author">
+                            <div id="title">Recommended</div>
+                        </a>
+                            <div class="buttons_sec">
+                                <a id="scroll2-left-btn">
+                                    <img src="./resources/videos/Left.png" alt="">
+                                </a>
+                                <a id="scroll2-right-btn">
+                                    <img src="./resources/videos/Right.png" alt="">
+                                </a>
+                            </div>
+                    </div>
+                    <div class="videos"  id="videos2-container">
+                        <a class="video">
+                            <div class="rec_preview">
+                                <img src="./resources/videos/recommended/Cover1.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">4:15</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">A Brief History Of Creation</div>
+                            <div class="info">
+                                <div class="video_info">80k views · 3 days ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                        <a class="video">
+                            <div class="rec_preview">
+                                <img src="./resources/videos/recommended/Cover2.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">8:00</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">Selecting The Right Hotel</div>
+                            <div class="info">
+                                <div class="video_info">123k views  ·  1 months ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                        <a class="video">
+                            <div class="rec_preview">
+                                <img src="./resources/videos/recommended/Cover3.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">5:32</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">Asteroids</div>
+                            <div class="info">
+                                <div class="video_info">43k views  ·  12 days ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                <section id="Food_Drink">
+                    <div id="sec">
+                        <a id="author">
+                            <img id="author_pic" src="./resources/videos/food&drink/foodLogo.png" alt="">
+                            <div id="author_name">Food & Drink</div>
+                            <div id="rec_channel">Recommended channel for you</div>
+                        </a>
+                        <div class="buttons_sec">
+                            <div id="subscribe_button">Subscribe 2.3m</div>
+                            <a id="scroll3-left-btn">
+                                <img src="./resources/videos/Left.png" alt="">
+                            </a>
+                            <a id="scroll3-right-btn">
+                                <img src="./resources/videos/Right.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="videos"  id="videos3-container">
+                        <a class="video">
+                            <div class="preview">
+                                <img src="./resources/videos/food&drink/Cover1.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">4:15</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">Astronomy Or Astrology</div>
+                            <div class="info">
+                                <div class="video_info">80k views · 3 days ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                        <a class="video">
+                            <div class="preview">
+                                <img src="./resources/videos/food&drink/Cover2.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">8:00</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">Advertising Outdoors</div>
+                            <div class="info">
+                                <div class="video_info">123k views  ·  1 months ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                        <a class="video">
+                            <div class="preview">
+                                <img src="./resources/videos/food&drink/Cover3.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">5:32</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">Radio Astronomy</div>
+                            <div class="info">
+                                <div class="video_info">43k views  ·  12 days ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                        <a class="video">
+                            <div class="preview">
+                                <img src="./resources/videos/food&drink/Cover4.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">6:40</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">A Good Autoresponder</div>
+                            <div class="info">
+                                <div class="video_info">11k views  ·  6 months ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                        <a class="video">
+                            <div class="preview">
+                                <img src="./resources/videos/food&drink/Cover5.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">1:45</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">Baby Monitor Technology</div>
+                            <div class="info">
+                                <div class="video_info">18k views  ·  2 days ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                        <a class="video">
+                            <div class="preview">
+                                <img src="./resources/videos/food&drink/Cover6.png" alt="">
+                                    <div class="time">
+                                        <div class="time_text">2:15</div>
+                                    </div>
+                                </img> 
+                            </div>
+                            <div class="video_name">Asteroids</div>
+                            <div class="info">
+                                <div class="video_info">67k views  ·  4 months ago</div>
+                                <div class="video_author">Dollie Blair</div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
             </div>
-            <div class="videos"  id="videos3-container">
-                <a class="video">
-                    <div class="preview">
-                        <img src="./resources/videos/food&drink/Cover1.png" alt="">
-                            <div class="time">
-                                <div class="time_text">4:15</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">Astronomy Or Astrology</div>
-                    <div class="info">
-                        <div class="video_info">80k views · 3 days ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-                <a class="video">
-                    <div class="preview">
-                        <img src="./resources/videos/food&drink/Cover2.png" alt="">
-                            <div class="time">
-                                <div class="time_text">8:00</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">Advertising Outdoors</div>
-                    <div class="info">
-                        <div class="video_info">123k views  ·  1 months ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-                <a class="video">
-                    <div class="preview">
-                        <img src="./resources/videos/food&drink/Cover3.png" alt="">
-                            <div class="time">
-                                <div class="time_text">5:32</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">Radio Astronomy</div>
-                    <div class="info">
-                        <div class="video_info">43k views  ·  12 days ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-                <a class="video">
-                    <div class="preview">
-                        <img src="./resources/videos/food&drink/Cover4.png" alt="">
-                            <div class="time">
-                                <div class="time_text">6:40</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">A Good Autoresponder</div>
-                    <div class="info">
-                        <div class="video_info">11k views  ·  6 months ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-                <a class="video">
-                    <div class="preview">
-                        <img src="./resources/videos/food&drink/Cover5.png" alt="">
-                            <div class="time">
-                                <div class="time_text">1:45</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">Baby Monitor Technology</div>
-                    <div class="info">
-                        <div class="video_info">18k views  ·  2 days ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-                <a class="video">
-                    <div class="preview">
-                        <img src="./resources/videos/food&drink/Cover6.png" alt="">
-                            <div class="time">
-                                <div class="time_text">2:15</div>
-                            </div>
-                        </img> 
-                    </div>
-                    <div class="video_name">Asteroids</div>
-                    <div class="info">
-                        <div class="video_info">67k views  ·  4 months ago</div>
-                        <div class="video_author">Dollie Blair</div>
-                    </div>
-                </a>
-            </div>
-        </section>
+        </div>
     </div>
 <script>
         const scrollContainer = document.getElementById('videos-container');

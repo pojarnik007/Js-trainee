@@ -1,1016 +1,905 @@
-body{
-    width: 1920px;
-    background-color: #FFFFFF;
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+body {
+    box-sizing: border-box;
     margin: 0;
-    overflow-x: hidden; 
-}
-
-#top_section{
-    z-index: 1;
-    display: flex;
-    position: fixed;
+    padding: 0;
+    font-family: "Mulish", sans-serif;
     background-color: #FFFFFF;
-    width: 100vw;
-    height: 65px;
-}
-
-#top_section a:hover{
-    cursor: pointer;
-}
-
-#menu_button{
-    position: absolute;
-    top: 34px;
-    left: 32px;
-}
-
-#logo{
-    position: absolute;
-    left: 80px;
-    top: 30px; 
-}
-
-.search{
-    display: flex;
-    position: absolute;
-    top: 20px;
-    left: 255px;
-}
-
-#search_field{
-   width: 830px; 
-   height: 44px;
-   border-radius: 22px;
-   opacity: 30%;
-   border: 0;
-   display: flex;
-   position: relative;
-   background-color: #EBEBEB;
-}
-
-@media (max-width: 1460px) {
-    .search{
-        width: 50%;
-    }
-    #search_field {
-        width: 100%;
-    }
-}
-
-@media (max-width: 1220px) {
-    .search{
-        width: 40%;
-    }
-    #search_field {
-        width: 100%;
-    }
-}
-
-@media (max-width: 1010px) {
-    .search{
-        width: 30%;
-    }
-    #search_field {
-        width: 100%;
-    }
-}
-
-@media (max-width: 860px) {
-    .search{
-        width: 20%;
-    }
-    #search_field {
-        width: 100%;
-    }
-}
-
-#search_text{
-    position: relative;
-    font-family: "Mulish", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    margin: auto;
-    margin-left: 20px;
-}
-
-.search_icon{
-    position: absolute;
-    right: 15px;
-    margin-top: 12.5px;
-}
-
-.right_part{
-    display: flex;
-}
-
-.icons{
-    position: fixed;
-    top: 23px;
-    right: 155px; 
-    width: 175px;
-    height: 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#notifications{
-    display: flex;
-    align-items: center;
-}
-
-#notify_oval{
-    position: absolute;
-    margin-bottom: 17px;
-    margin-left: 7px;
-}
-
-#notify_count{
-    font-family: "Mulish", sans-serif;
-    position: absolute;
-    margin-bottom: 17px;
-    margin-left: 13px;
-    font-size: 12px;
-    font-weight: 700;
-    color: #FFFFFF;
-}
-
-.user_pic{
-    position: fixed;
-    top: 22px;
-    right: 70px;
-}
-
-.sidebar{
-    overflow-y: hidden;
     overflow-x: hidden;
-    height: 90vh;
-    width: 220px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* ============================================
+   LAYOUT CONTAINER
+   ============================================ */
+
+#content_container {
     display: flex;
     flex-direction: column;
-    gap: 58px;
-    position: fixed;
-    top: 59px;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
 }
 
-.sidebar:hover {
-  overflow-y: auto;
-}
+/* ============================================
+   TOPBAR
+   ============================================ */
 
-
-
-#menu{
-    top: 55px;
+#top_section {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
-    flex-direction: column;
-    gap: 29px;
-    left: 31px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 65px;
+    background-color: #FFFFFF;
+    gap: 20px;
 }
 
-.sidebar a{
-    display: flex;
-}
-
-.sidebar a:hover{
+#top_section a:hover {
     cursor: pointer;
 }
 
-#menu, a, div{
-    position: relative;
-    font-family: "Mulish", sans-serif;
-    color: #898989;
-    justify-content: space-between;
+/* Topbar Left Section */
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 28px;
 }
 
-#home{
-    color: #FF0000 !important;
+#menu_button {
+    display: flex;
+    align-items: center;
 }
 
-.home{
-    width: 78px;
-    height: 20px;
-}
-
-#home_ico{
+#menu_button img {
     width: 20px;
-    height: 19px;
-}
-
-.trending{
-    width: 96px;
-    height: 21px;
-}
-
-#trending_ico{
-    width: 16px;
-    height: 21px;
-}
-
-.subscriptions{
-    width: 132px;
-    height: 20px;
-}
-
-#subscriptions_ico{
-    width: 18px;
-    height: 18px;
-}
-
-.library{
-    width: 86px;
-    height: 20px;
-}
-
-#library_ico{
-    width: 20px;
-    height: 16px;
-}
-
-.history{
-    width: 87px;
-    height: 20px;
-}
-
-#history_ico{
-    width: 20px;
-    height: 18px;
-}
-
-.watch_later{
-    width: 119px;
-    height: 20px;
-}
-
-#watch_later_ico{
-    width: 17px;
-    height: 19px;
-}
-
-.favourites{
-    width: 110px;
-    height: 20px;
-}
-
-#favourites_ico{
-    width: 19px;
-    height: 18px;
-}
-
-.liked_videos{
-    width: 123px;
-    height: 20px;
-}
-
-#liked_videos_ico{
-    width: 18px;
     height: 17px;
 }
 
-.music{
-    width: 75px;
-    height: 20px;
+#logo {
+    width: 116px;
+    height: 25px;
 }
 
-#music_ico{
-    width: 18px;
-    height: 20px;
+#logo2 {
+    display: none;
+    width: 37px;
+    height: 25px;
 }
 
-.games{
-    width: 86px;
-    height: 20px;
+#top_channel_name {
+    display: none;
+    font-weight: 700;
+    font-size: 16px;
+    color: #19202C;
 }
 
-#games_ico{
-    width: 22px;
-    height: 16px;
+/* Topbar Search */
+.search {
+    flex: 1;
+    max-width: 830px;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
-.show_more{
-    width: 115px;
-    height: 20px;
-}
-
-#show_more_ico{
-    margin-top: 8px;
-    margin-left: 4px;
-    width: 14px;
-    height: 8px;
-}
-
-#subscriptions_menu{
+#search_field {
+    flex: 1;
+    height: 44px;
+    border-radius: 22px;
+    border: 0;
+    background-color: #EBEBEB;
+    opacity: 0.3;
     position: relative;
     display: flex;
-    flex-direction: column;
-    top: 55px;
-    width: 159px;
-    height: 324px;
-    left: 31px;
-    gap: 30px;
+    align-items: center;
+    padding: 0 50px 0 20px;
 }
 
-#subscriptions_menu #subs a{
-    position: relative;
-    font-family: "Mulish", sans-serif;
-    color: #898989;
-    gap: 10px;
+#search_text {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    opacity: 1;
+}
+
+.search_icon {
+    position: absolute;
+    right: 15px;
+    display: flex;
     align-items: center;
 }
 
-#subscriptions_menu #subs a{
-    width: 159px;
-    justify-content: start;
+#search_icon {
+    width: 19px;
+    height: 19px;
 }
 
-#subscriptions_title{
-    font-family: "Mulish", sans-serif;
-    color: #000000;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-#subs{
-    width: 159px;
-    height: 271px;
+/* Topbar Right Section */
+.topbar-right {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
 }
 
-#subscriptions_menu #subs a img{
-    width: 26px;
-    height: 26px;
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
-.settings{
-    top: 55px;
+.icons img {
+    display: block;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+#notifications {
     position: relative;
     display: flex;
-    width: 84px;
-    height: 20px;
-    left: 34px;
-    justify-content: space-between;
+    align-items: center;
 }
 
-#settings_ico{
+#notify_oval {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 18px;
+    height: 18px;
+}
+
+#notify_count {
+    position: absolute;
+    top: -5px;
+    right: -1px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.user_pic {
+    display: flex;
+    align-items: center;
+}
+
+#user_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#more_top_channel {
+    display: none;
+    width: 5px;
+    height: 19px;
+}
+
+#content_inner {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+}
+
+/* ============================================
+   SIDEBAR
+   ============================================ */
+
+.sidebar {
+    position: sticky;
+    top: 65px;
+    width: 220px;
+    height: calc(100vh - 65px);
+    flex-shrink: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+    padding: 29px 0 29px 20px;
+    background-color: #FFFFFF;
+    border-right: 1px solid #EBEBEB;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #EBEBEB;
+    border-radius: 3px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #898989;
+}
+
+.sidebar a:hover {
+    cursor: pointer;
+    color: #FF0000;
+}
+
+/* Menu Items */
+#menu {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+
+#menu a {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#menu img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+#home {
+    color: #FF0000;
+}
+
+/* Subscriptions Menu */
+#subscriptions_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#subscriptions_title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+}
+
+#subs {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#subs a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#subs img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Settings */
+.settings {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #898989;
+}
+
+.settings img {
     width: 19px;
     height: 20px;
 }
 
-#settings{
-    position: relative;
-    font-family: "Mulish", sans-serif;
-    color: #898989;
-}
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
 
-.main{
+.main {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    left: 255px;
-    top: 114px; 
-    width: 90vw;
+    background-color: #FFFFFF;
+    min-width: 0;
 }
 
-#Dollie_Blair{
-    display: flex;
-    flex-direction: column;
-    height: 263px;
-    gap: 30px;
-    margin-top: 61px;
+/* Channel Banner */
+#channel_back {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
 }
 
-#video_sec{
-    width: 295px;
-    height: 33px;
+#mobile_channel_back {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+/* Author Section */
+#sec_auth {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 30px 20px;
+    gap: 20px;
 }
 
-#video_sec_name{
-    font-family: "Mulish", sans-serif;
+#author {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#author_pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+#author_inf {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#author_name {
     font-weight: 700;
     font-size: 26px;
     color: #19202C;
 }
 
-.videos {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    font-family: "Mulish", sans-serif;
-    justify-content: start;
-    height: 180%;
-    overflow-x: scroll;
-    white-space: nowrap;
-    scroll-behavior: smooth; 
-    scrollbar-width: none;
-    -ms-overflow-style: none; 
-}
-
-.videos a:hover{
-    cursor: pointer;
-}
-
-.video{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.preview img{
-    width: 250px;
-    height: 150px;
-}
-
-.rec_preview img{
-    width: 540px;
-    height: 250px;  
-}
-
-.time{
-    position: absolute;
-    margin-top: -40px;
-    margin-left: 193px;
-    width: 47px;
-    height: 24px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.time_text{
-    opacity: 130%;
-    font-weight: 400;
-    font-size: 14px;
-    color: #FFFFFF;
-}
-
-.video_name{
-    font-weight: 700;
-    font-size: 16px;
-    color: #19202C;
-}
-
-.info{
+#author_subs {
     font-weight: 400;
     font-size: 13px;
     color: #C2C2C2;
-    display: flex;
 }
 
-.buttons_sec{
+.buttons_sec {
     display: flex;
-    gap: 10px;
     align-items: center;
-    flex-direction: row;
-    justify-content: start;
-    position: relative;
-    margin-left: auto;
-    margin-right: 240px;
+    gap: 10px;
 }
 
-.buttons_sec a:hover{
+.buttons_sec a:hover {
     cursor: pointer;
 }
 
-
-.buttons_sec img{
+.buttons_sec img {
     width: 28px;
     height: 28px;
 }
 
-#sec{
-    width: auto;
+#sec_notify_a {
     display: flex;
-    flex-direction: row;
-    height: 80px;
-    gap: 19px;
-    align-items:center;
+    align-items: center;
+    justify-content: center;
 }
 
-.buttons_sec #subscribe_button:hover{
-    cursor: pointer;
+#sec_notify {
+    width: 22px;
+    height: 26px;
 }
 
-#subscribe_button{
+#subscribe_button {
     background-color: #FF0000;
-    width: 154px;
-    height: 40px;
+    padding: 10px 20px;
     border-radius: 20px;
     font-size: 16px;
     font-weight: 400;
     color: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: -80px;
-}
-
-.buttons_sec #subscribe_button:hover{
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#author{
-    position: relative;
-    width: 299px;
-    height: 80px;
+#subscribe_button:hover {
+    background-color: #CC0000;
+}
+
+/* Channel Menu */
+.channel_menu {
     display: flex;
     align-items: center;
+    gap: 40px;
+    padding: 0 20px;
 }
 
-#author_inf{
-    display: flex;
-    flex-direction: column;
-}
-
-#author_pic{
-    height: 80px;
-}
-
-#author_name{
-    display: flex;
-    font-family: "Mulish", sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    color: #19202C;
-}
-
-#author_subs{
-    display: flex;
-    font-family: "Mulish", sans-serif;
-    font-weight: 400;
-    font-size: 13px;
-    color: #C2C2C2;
-}
-
-.channel_menu{
-    margin-top: 20px;
-    display: flex;
-    width: 834px;
-    height: 28px;
-}
-
-.channel_menu div{
-    display: flex;
-    font-family: "Mulish", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: #000000;
-}
-
- #channels_button, #discussion_button, #about_button, #search_channel_menu, #playlist_button, #videos_button{
-    display: flex;
-    font-family: "Mulish", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: #000000;
- }
-
-.channel_menu a{
+.channel_menu a {
     text-decoration: none;
-    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s;
+    border-bottom: 2px solid transparent;
 }
 
-#home_sec{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#home_button{
+.channel_menu a:hover {
     color: #FF0000;
 }
 
-#underscore{
-    background-color: #FF0000;
+.channel_menu a[id="home_sec"] {
+    color: #FF0000;
+    border-color: #FF0000;
+}
+
+#home_sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#underscore {
     width: 60px;
     height: 2px;
+    background-color: #FF0000;
     border-radius: 3px;
+    margin-top: 8px;
 }
 
-.center{
-    height: 250px;
-    margin-top: 54px;
+#last_channel_button {
     display: flex;
-    flex-direction: row;
-    gap: 204px;
-    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
 }
 
-.prev_video{
-    width: 1120px;
-    height: 250px;
+#more_channel_menu {
+    display: none;
 }
 
-.prev_video .video{
+/* Center Content Section */
+.center {
     display: flex;
-    flex-direction: row;
+    gap: 60px;
+    padding: 54px 20px;
+}
+
+.prev_video {
+    flex: 1;
+    min-width: 0;
+}
+
+.prev_video .video {
+    display: flex;
     gap: 32px;
 }
 
-.prev_info{
+.prev_preview {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.prev_preview img {
+    width: 100%;
+    max-width: 540px;
+    height: 250px;
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+.prev_info {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    justify-content: start;
+    flex: 1;
+    min-width: 0;
 }
 
-#video_name{
-    width: 431px;
-    height: 68px;
-    margin-top: 17px;
-    display: flex;
-    font-family: "Mulish", sans-serif;
+#video_name {
     font-weight: 700;
     font-size: 26px;
     color: #19202C;
+    line-height: 1.3;
 }
 
-#video_description{
-    display: flex;
-    font-family: "Mulish", sans-serif;
+#video_description {
     font-weight: 400;
     font-size: 16px;
     color: #000000;
-    opacity: 60%;
+    opacity: 0.6;
+    line-height: 1.5;
 }
 
-#video_info{
-    margin-top: 20px;
+#video_info {
+    font-weight: 400;
+    font-size: 16px;
+    color: #C2C2C2;
+    margin-top: 10px;
+}
+
+/* Recommended Channels */
+.recommended_channels {
     display: flex;
-    font-family: "Mulish", sans-serif;
+    flex-direction: column;
+    gap: 30px;
+    min-width: 200px;
+}
+
+#rec_title {
     font-weight: 400;
     font-size: 16px;
     color: #C2C2C2;
 }
 
-.video{
+.recommended_channels a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.recommended_channels a:hover {
+    transform: translateX(5px);
+}
+
+.recommended_channels a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.recommended_channels a div {
+    font-weight: 700;
+    font-size: 18px;
+    color: #19202C;
+}
+
+/* Videos Section */
+#Dollie_Blair {
+    padding: 0 20px 40px 20px;
+}
+
+#sec {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#video_sec {
+    display: flex;
+    align-items: center;
+}
+
+#video_sec_name {
+    font-weight: 700;
+    font-size: 26px;
+    color: #19202C;
+}
+
+#sec .buttons_sec {
+    margin: 0;
+}
+
+.videos {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.videos::-webkit-scrollbar {
+    display: none;
+}
+
+.videos a:hover {
+    cursor: pointer;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.preview {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.preview img {
+    width: 250px;
+    height: 150px;
+    display: block;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.time {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 4px 8px;
+}
+
+.time_text {
+    font-weight: 600;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.video_name {
+    font-weight: 700;
+    font-size: 16px;
+    color: #19202C;
+    max-width: 250px;
+}
+
+.info {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.prev_preview img{
-    width: 540px;
-    height: 250px;  
-}
-
-.prev_video .time{
-    position: absolute;
-    margin-top: -40px;
-    margin-left: 483px;
-    width: 47px;
-    height: 24px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.recommended_channels{
-    width: 188px;
-    height: 260px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: -70px;
-}
-
-#rec_title{
-    display: flex;
-    font-family: "Mulish", sans-serif;
+.video_info,
+.video_author {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 13px;
     color: #C2C2C2;
 }
 
-.recommended_channels a{
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    gap: 20px;
-    width: 189px;
-    height: 50px;
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1200px) {
+    #content_container {
+        grid-template-columns: 180px 1fr;
+    }
+    
+    .sidebar {
+        width: 180px;
+    }
+    
+    #menu a,
+    #subs a,
+    .settings {
+        font-size: 14px;
+    }
 }
-
-.recommended_channels a div{
-    display: flex;
-    font-family: "Mulish", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    color: #19202C;
-}
-
-.recommended_channels a img{
-    height: 50px;
-}
-
-#sec_auth{
-    margin-top: 30px;
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    height: 80px;
-    gap: 19px;
-    align-items:center;
-}
-
-#channel_back{
-    margin-top: -10px;
-}
-
-#sec_notify{
-    width: 22px;
-    height: 26px;
-}
-
-#sec_notify_a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: -70px;
-}
-
-#logo2{
-    display: none;
-}
-
-#top_channel_name{
-    display: none;
-}
-
-#more_top_channel{
-    display: none;
-}
-
-#mobile_channel_back{
-    display: none;
-}
-
-#more_channel_menu{
-    display: none;
-}
-
-
-/* ---------------------------------------------------------------------------- */
-
-
 
 @media (max-width: 768px) {
-
-    #mobile_channel_back{
-        display: block;
-        width: 100%;
-        height: auto;
+    #content_container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 61px;
+        grid-template-areas:
+            "topbar"
+            "main"
+            "sidebar";
     }
 
-    #channel_back{
+    /* Mobile Topbar */
+    #top_section {
+        height: 50px;
+        padding: 0 16px;
+        gap: 10px;
+    }
+
+    #menu_button {
         display: none;
     }
 
-    #logo{
+    #logo {
         display: none;
     }
 
-    #logo2{
+    #logo2 {
         display: block;
-        position: absolute;
-        top: 12px;
-        left: 16px; 
     }
 
-    #top_channel_name{
+    .topbar-left {
+        gap: 10px;
+    }
+
+    #top_channel_name {
         display: block;
-        font-family: "Mulish", sans-serif;
-        color: #19202C;
-        font-size: 16px;
-        font-weight: 700;
-        position: absolute;
-        width: 127px;
-        top: 14px;
-        left: 63px; 
+        white-space: nowrap;
     }
 
-    .search{
-        display: flex;
-        position: absolute;
-        width: auto;
-        left: 0px;
-        height: 19px;
-        right: 80px;
-        margin-top: -4px;
+    .search {
+        max-width: 0;
     }
 
-    .time{
-        right: 10px;
-        bottom: 15px;
-    }
-
-    .video{
-        width: 80%;
-    }
-
-    .video img{
-        width: 100%;
-        height: 100%;
-    }
-
-    .user_pic img{
-        width: 30px;
-        height: 30px;
-    }
-
-    #user_img{
+    #search_field {
         display: none;
     }
 
-    #more_top_channel{
+    .search_icon {
+        position: static;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    #user_img {
+        display: none;
+    }
+
+    #more_top_channel {
         display: block;
+    }
+
+    .user_pic {
+        margin-left: auto;
+    }
+
+    /* Mobile Sidebar - Bottom Navigation */
+    .sidebar {
         position: fixed;
-        top: 15px;
-        right: 20px;
-        width: 5px;
-        height: 19px;
-    }
-
-    .search_icon{
-        right: 0px;
-        margin-top: 0px;
-    }
-
-    .user_pic{
-        position: fixed;
-        top: 10px;
-        right: 16px;
-    }
-
-    #menu_button{
-        display: none;
-    }
-
-    #search_field{
-        display: none;
-    }
-
-    .icons{
-        display: none;
-    }
-
-    .main{
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        align-items: center;
-        width: 100%;
-        left: 0px;
-        padding-bottom: 70px;
-        top: 60px;
-    }
-
-    #sec_auth{
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-    }
-
-    #sec_notify_a{
-        display: none;
-    }
-
-    .buttons_sec{
-        width: 100%;
-        align-items: start;
-        margin-top: 45px;
-    }
-
-    #subscribe_button{
-        right: auto;
-        left: 16px;
-        height: 34px;
-        width: 120px;
-        font-size: 12px;
-    }
-
-    #author{
-        left: 16px;
-        width: 100%;
-        margin-top: -70px;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .channel_menu{
-        justify-content: space-around;
-        margin-top: 30px;
-        width: 100%;
-    }
-
-    #home_button{
-        font-weight: 700;
-    }
-
-    #channels_button, #discussion_button, #about_button, #search_channel_menu{
-        display: none;
-    }
-
-    #last_channel_button{
-        align-items: center;
-        display: flex;
-    }
-
-    .center{
-        display: none;
-    }
-
-    #more_channel_menu{
-        display: flex;
-    }
-
-    #menu{
-        top: 0;
-        width: 100%;
-        height: 100%;
+        bottom: 0;
         left: 0;
+        right: 0;
+        height: 61px;
+        width: 100%;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 0px;
+        justify-content: space-around;
+        padding: 0;
+        gap: 0;
+        border-top: 1px solid #EBEBEB;
+        border-right: none;
+        z-index: 100;
+        top: auto;
     }
 
-    #menu div{
-        font-size: 10px
+    #menu {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        gap: 0;
     }
 
-    #space{
-        display: none !important;
-    }
-
-    #menu a{
+    #menu a {
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        font-size: 10px;
+        padding: 10px;
     }
 
-    #subscriptions_menu{
-        display: none;
-    }
-
-    .sidebar a{
-        display: none;
-    }
-
-    .settings{
-        display: none;
-    }
-
-    .home, .trending, .subscriptions, .library{
+    .home,
+    .trending,
+    .subscriptions,
+    .library {
         display: flex !important;
     }
 
-
-    .sidebar {
-        top: auto;
-        position: fixed; 
-        left: 0;   
-        bottom: 0;       
-        width: 100%;        
-        height: 61px;      
-        display: flex;      
-        flex-direction: row;
-        justify-content: space-around; 
-        align-items: center;
-        background-color: #FFFFFF;
-        border-top: 1px solid #EBEBEB; 
-        z-index: 1;      
-    }
-
-    #Dollie_Blair{
-        margin-top: 16px;
-        height: auto;
-        width: 100%;
-        align-items: center;
-    }
-
-    #Recommended{
-        height: auto;
-    }
-
-    #Food_Drink{
-        height: auto;
-    }
-
-    #sec{
+    #menu a:not(.home):not(.trending):not(.subscriptions):not(.library) {
         display: none;
     }
 
-    .videos{
+    #subscriptions_menu,
+    .settings {
+        display: none;
+    }
+
+    /* Mobile Main Content */
+    .main {
+        padding-bottom: 70px;
+    }
+
+    #mobile_channel_back {
+        display: block;
+    }
+
+    #channel_back {
+        display: none;
+    }
+
+    #sec_auth {
         flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 16px;
+        gap: 20px;
+    }
+
+    #author {
+        flex-direction: column;
+        align-items: flex-start;
         width: 100%;
+    }
+
+    #sec_notify_a {
+        display: none;
+    }
+
+    .buttons_sec {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    #subscribe_button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .channel_menu {
+        gap: 20px;
+        padding: 0 16px;
+        justify-content: space-around;
+        overflow-x: auto;
+        border-bottom: none;
+    }
+
+    #home_button {
+        font-weight: 700;
+    }
+
+    #channels_button,
+    #discussion_button,
+    #about_button,
+    #search_channel_menu {
+        display: none;
+    }
+
+    #last_channel_button {
+        display: flex;
+    }
+
+    #more_channel_menu {
+        display: flex;
+    }
+
+    .center {
+        display: none;
+    }
+
+    #Dollie_Blair {
+        padding: 16px;
+    }
+
+    #sec {
+        display: none;
+    }
+
+    .videos {
+        flex-direction: column;
+        gap: 20px;
         align-items: center;
+    }
+
+    .video {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .preview img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    .video_name {
+        max-width: 100%;
     }
 }

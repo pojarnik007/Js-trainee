@@ -1,49 +1,147 @@
 import './main_sec.css'
+import video from "/video.mp4";
+import { useEffect, useRef, useState } from "react";
+import { IconContext } from "react-icons";
+import { BiPlay, BiSkipNext, BiSkipPrevious, BiPause } from "react-icons/bi";
+
+
 
 function Main_section() {
+
+    const videoRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [currentTime, setCurrentTime] = useState([0, 0]);
+    const [currentTimeSec, setCurrentTimeSec] = useState(0);
+    const [duration, setDuration] = useState([0, 0]);
+    const [durationSec, setDurationSec] = useState(0);
+
+    const sec2Min = (sec) => {
+    const min = Math.floor(sec / 60);
+    const secRemain = Math.floor(sec % 60);
+        return {
+        min: min,
+        sec: secRemain
+        };
+    };
+
+    useEffect(() => {
+        const { min, sec } = sec2Min(videoRef.current.duration);
+        setDurationSec(videoRef.current.duration);
+        setDuration([min, sec]);
+
+        console.log(videoRef.current.duration);
+        const interval = setInterval(() => {
+        const { min, sec } = sec2Min(videoRef.current.currentTime);
+        setCurrentTimeSec(videoRef.current.currentTime);
+        setCurrentTime([min, sec]);
+        }, 1000);
+        return () => clearInterval(interval);
+    }, [isPlaying]);
+
+    const handlePlay = () => {
+        if (isPlaying) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+        } else {
+        videoRef.current.play();
+        setIsPlaying(true);
+        }
+    };
+
+    const handleMetadataLoaded = () => {
+        if (videoRef.current) {
+            const { min, sec } = sec2Min(videoRef.current.duration);
+            setDurationSec(videoRef.current.duration);
+            setDuration([min, sec]);
+        }
+    };
+
+
     return (
     <section className='main'>
         <div id='main_video'>
-            <div  id='video_screen'>
-                <div id='main_video_prev'>
-                    <img src="/main_video/Cover.png" alt="" />
-                </div>
-                <div id='main_nav'>
-                    <div id='time_sec'>
-                        <div id='start_time'>1:34</div>
-                        <div id='end_time'>19:00</div>
-                    </div>
-                    <div id='timeline_sec'>
-                        <div id='progress'></div>
-                    </div>
-                    <div id='video_nav_sec'>
-                        <div id='left_part'>
-                            <img id='pause_ico' src="/main_video/Pause.png" alt="" />
-                            <img id='next_ico' src="/main_video/Next.png" alt="" />
-                            <div id='volume_sec'>
-                                <img id='volume_ico' src="/main_video/Volume.png" alt="" />
-                                <div id='volume_bar'>
-                                    <div id='volume_progress'></div>
+            <div className="container">
+                <div className="playerContainer">
+                    <video className="videoPlayer" ref={videoRef} src={video}></video>
+                    <div className="controlsContainer">
+                        <div className="duration">
+                            <div id='durationLeft'>{currentTime[0]}:{currentTime[1]}</div>
+                            <div id='durationRight'>{duration[0]}:{duration[1]}</div> 
+                        </div>
+                        <input
+                            type="range"
+                            min="0"
+                            max={durationSec || 0}
+                            default="0"
+                            onLoadedMetadata={handleMetadataLoaded}
+                            value={currentTimeSec}
+                            className="timeline"
+                            onChange={(e) => {
+                            videoRef.current.currentTime = e.target.value;
+                            }}
+                        />
+                        <div className="controls">
+                            <div id='left_part'>
+                                {isPlaying ? (
+                                    <button className="controlButton" onClick={handlePlay}>
+                                        <IconContext.Provider value={{ color: "white", size: "2em" }}>
+                                        <img id='pause_ico' src="/main_video/Pause.png" alt="" />
+                                        </IconContext.Provider>
+                                    </button>
+                                    ) : (
+                                    <button className="controlButton" onClick={handlePlay}>
+                                        <IconContext.Provider value={{ color: "white", size: "2em" }}>
+                                        <img id='pause_ico' src="/main_video/Play.png" alt="" />
+                                        </IconContext.Provider>
+                                    </button>
+                                )}
+                                <img id='next_ico' src="/main_video/Next.png" alt="" />
+                                <div id='volume_sec'>
+                                    <img id='volume_ico' src="/main_video/Volume.png" alt="" />
+                                    <div id='volume_bar'>
+                                        <div id='volume_progress'></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div id='right_part'>
-                            <img id='sub_ico' src="/main_video/Subtitles.png" alt="" />
-                            <img id='set_ico' src="/main_video/Settings.png" alt="" />
-                            <img id='size_ico' src="/main_video/Size.png" alt="" />
-                            <img id='screen_ico' src="/main_video/Full Screen.png" alt="" />
-                        </div>
-                    </div>
-                    <div id='mobile_video_nav_sec'>
-                        <img id='pause_mob' src="/main_video/Pause.png" alt="" height='12px' />
-                        <div id='mob_center'>
-                            <div id='start_time_mob'>1:34</div>
-                            <div id='timeline_mob'>
-                                <div id='progress_mob'></div>
+                            <div id='right_part'>
+                                <img id='sub_ico' src="/main_video/Subtitles.png" alt="" />
+                                <img id='set_ico' src="/main_video/Settings.png" alt="" />
+                                <img id='size_ico' src="/main_video/Size.png" alt="" />
+                                <img id='screen_ico' src="/main_video/Full Screen.png" alt="" />
                             </div>
-                            <div id='end_time_mob'>-10:00</div>
                         </div>
-                        <img id='volume_mob' src="/main_video/Volume.png" alt="" height='12px' />
+                            <div id='mobile_video_nav_sec'>
+                                {isPlaying ? (
+                                    <button className="controlButton" onClick={handlePlay}>
+                                        <IconContext.Provider value={{ color: "white", size: "2em" }}>
+                                        <img id='pause_ico' src="/main_video/Pause.png" alt="" />
+                                        </IconContext.Provider>
+                                    </button>
+                                    ) : (
+                                    <button className="controlButton" onClick={handlePlay}>
+                                        <IconContext.Provider value={{ color: "white", size: "2em" }}>
+                                        <img id='pause_ico' src="/main_video/Play.png" alt="" />
+                                        </IconContext.Provider>
+                                    </button>
+                                )}
+                                <div id='mob_center'>
+                                    <div id='start_time_mob'>{currentTime[0]}:{currentTime[1]}</div>
+                                    <input
+                                        type="range"
+                                        min="0"
+                                        max={durationSec || 0}
+                                        default="0"
+                                        onLoadedMetadata={handleMetadataLoaded}
+                                        value={currentTimeSec}
+                                        className="timeline_mob"
+                                        onChange={(e) => {
+                                        videoRef.current.currentTime = e.target.value;
+                                        }}
+                                    />
+                                    <div id='end_time_mob'>{duration[0]}:{duration[1]}</div> 
+                                </div>
+                                <img id='volume_mob' src="/main_video/Volume.png" alt="" height='12px' />
+                            </div>
                     </div>
                 </div>
             </div>
